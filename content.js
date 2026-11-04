@@ -188,6 +188,40 @@ const FINANCE=[
 ];
 
 /* ---------- KPIs: [question, indicator, now, 2027 target, full text] ---------- */
+/* Financial tables from the content document (pasted there as images).
+   Amounts are in thousands of euros. In each row: task, workstream id, SSHOC-NL tasks, Macroscope tasks,
+   other projects, 2025 core, 2026 core, 2027 core, then planned expenditure for 2025, 2026, 2027 and 2028. */
+const FIN_TABLE={
+ years:["2025","2026","2027","2028"],
+ rows:[
+  ["CBS","data","1.3","1.3","","CBS","CBS","CBS",234,2753,478.696,283],
+  ["Portal","data","4.1; 4.2; 4.3","1.1","CD2","","","",529,914,1083.488,1017],
+  ["OSSC","data","","1.2","","SURF","","",220,411,523.337,416],
+  ["SANE","data","1.1","","SANE, FBB","UU-Rebo","","",468,913,966.661,999],
+  ["Data Collection","observatory","2.2","2.1","SHARE, ESS, TiU-ESS","","Data collection costs","TiU",560,2155,773.953,582],
+  ["Online Panels","observatory","2.1","2.2","PANL, Deepfield","Centerdata, RU-FSW","Centerdata (LISS panel extension)","Macroscope (Centerdata)",500,2455,1782.760,1780],
+  ["Netherlands Media Corpus","observatory","2.3, 3.2 (without UL)","","","","","",0,467,518.913,493],
+  ["Data Donation","laboratory","1.2","3.3","D3I","","","UvA (benchfees), Macroscope (UU)",185,780,768.697,686],
+  ["Mass Online Experiments","laboratory","3.3","","","","Centerdata (oTree)","",110,173,176.146,99],
+  ["Large Network Tools (POPNET)","laboratory","3.2","3.2 (only UL)","Popnet","","","UvA (benchfees)",88,583,620.762,607],
+  ["Coordination","hub","5.3","4.1","SBD, EUR PDI-SSH","EUR","EUR, VU","",566,1505,848.569,1046],
+  ["Education","hub","5.2","4.3","","","EUR","",51,484,469.769,573],
+  ["Support","hub","5.1","4.2","FIP, MUW, FAIR, AI4Social, CDIF","UU","EUR, UU, TUD","UU-FSW",843,1305,1224.168,1528],
+  ["CLARIAH","","2.3; 3.1","3.1","","","","",529,958,768,1153]],
+ total:[4885,15855,11004,11262]
+};
+/* Table 2: revenues and structural funding, in thousands of euros, for the same four years */
+const REV_TABLE=[
+ ["Unearmarked revenues",[1640,145,158.75,155]],
+ ["Unearmarked and allocated revenues",[1353,776,468,468]],
+ ["Remaining unallocated revenues",[287,-631,-310,-313]],
+ ["Cumulative unallocated revenues",[287,-344,-654,-968]],
+ null,
+ ["Structural funding",[1938,2791,2291,2291]],
+ ["Ongoing funding",[4586,13209,8871,9126]],
+ ["Structural funding as %",["29.71%","17.44%","20.52%","20.07%"]]
+];
+
 const KPI_INTRO=`ODISSEI’s scope has changed over the past year. The award of Macroscope and Deepfield, together with ODISSEI’s growing role in EU proposals, means the infrastructure now covers a larger and more varied portfolio than our current KPI table was designed for. Rather than adding rows to that table, we propose to monitor ODISSEI through eight questions, each answered by one indicator with its current status and a 2027 target.`;
 const KPI=[
  ["Are members getting value?","Grant funding brought in per euro of membership fees","€[X] brings in €[Y]","At least [1:3]",`Membership fees are used as co-financing for grant applications, so each member’s contribution brings in more research funding than it could alone. Currently, €[X] in fees brings in €[Y] in grants, a ratio of [1:Y]. Our target is at least [1:3] by 2027.`],

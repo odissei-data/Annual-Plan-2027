@@ -216,6 +216,28 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .fund ul{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}
 .fund li{display:grid;grid-template-columns:14px 1fr;gap:12px;font-size:15px;color:var(--on-dark-text)}
 .fund li::before{content:"";width:8px;height:8px;background:var(--cyan);margin-top:8px}
+.ftables{display:grid;grid-template-columns:minmax(0,1fr);gap:40px;margin-top:56px}
+.ftab{margin:0;min-width:0}
+.ftab figcaption{font-size:16px;color:var(--on-dark-text);margin-bottom:14px}
+.ftab figcaption b{color:#fff;font-weight:500}
+.tscroll{overflow-x:auto;border:1px solid var(--dark-line);border-radius:var(--r-lg)}
+.tscroll:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.ft{width:100%;border-collapse:collapse;font-size:14px;color:var(--on-dark-text);min-width:1080px}
+.ft.rt{min-width:560px}
+.tscroll:has(.rt){max-width:820px}
+.ft th,.ft td{padding:10px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--dark-line);white-space:nowrap}
+.ft thead th{font-size:12.5px;font-weight:500;color:var(--on-dark-muted);white-space:nowrap}
+.ft th[scope=row]{font-weight:500;color:#fff}
+.ft td.n,.ft th.n{text-align:right;white-space:nowrap}
+.ft .y27{background:rgba(2,218,248,.08);color:#fff}
+.ft .ws{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.ft .ws i{width:8px;height:8px;display:block}
+.ft tr.grp th,.ft tr.grp td{border-top:1px solid rgba(255,255,255,.35)}
+.ft tfoot th,.ft tfoot td{font-weight:500;color:#fff;border-bottom:0;background:rgba(255,255,255,.06)}
+.ft .neg{color:#ffb4a8}
+.ft tr.gap td{border-bottom:0;padding:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.tnote{font-size:13.5px;color:var(--on-dark-muted);margin-top:10px}
 .fund p{font-size:15px;color:var(--on-dark-muted);margin-top:20px;line-height:1.6}
 
 /* ---------- kpis ---------- */
@@ -541,6 +563,21 @@ html.pdf .band h2{font-size:52px}
   .fin-row .v small{color:var(--ink-muted)}
   .fin-row .items div{color:var(--ink-muted);border-top-color:var(--line-soft)}
   .fin-row .chev{display:none}
+  .ftables{gap:8mm;margin-top:8mm}
+  .ftab{break-inside:avoid}
+  .ftab figcaption{color:var(--ink);font-size:10.5pt}
+  .ftab figcaption b{color:var(--petrol)}
+  .tscroll{overflow:visible;border-color:var(--line-soft);border-radius:0}
+  .ft{min-width:0!important;font-size:6.6pt;color:var(--ink)}
+  .ft th,.ft td{padding:1.3mm 1.4mm;border-bottom-color:var(--line-soft);white-space:normal}
+  .ft thead th{color:var(--ink-muted);white-space:normal}
+  .ft th[scope=row],.ft .y27,.ft tfoot th,.ft tfoot td{color:var(--ink)}
+  .ft .y27{background:#e3f2f4}
+  .ft tr.grp th,.ft tr.grp td{border-top-color:var(--line)}
+  .ft tfoot th,.ft tfoot td{background:var(--tint)}
+  .ft .neg{color:#a3341f}
+  .ft.rt{font-size:8.5pt}
+  .tnote{color:var(--ink-muted);font-size:8.5pt}
   .fin-row>button{grid-template-columns:minmax(0,150px) minmax(0,1fr) auto!important;padding:4mm 5mm}
   .fin-row .bar{grid-column:auto!important;grid-row:auto!important}
   .fund{margin-top:4mm;break-inside:avoid}
@@ -688,8 +725,18 @@ html.pdf .band h2{font-size:52px}
         <ul>
           <li>The ODISSEI core budget, including membership fees</li><li>The SSHOC-NL and Macroscope projects</li><li>The PDI-SSH projects D3I, PANL, POPNET, SANE, FBB, FIP and EUR Coordination</li><li>MUW and CD2</li><li>The LSRI upgrade Deepfield</li><li>The EU projects AI4Social and CDIF4EOSC</li>
         </ul>
-        <p class="tbc-note">Table 1, with each task, its planned expenditure and its funding source, will be added here.</p>
       </div>
+    </div>
+    <div class="ftables">
+      <figure class="ftab">
+        <figcaption><b>Table 1.</b> Planned expenditure per task and its funding, in thousands of euros</figcaption>
+        <div class="tscroll" tabindex="0" role="region" aria-label="Table 1, scrollable"><table class="ft num" id="finTable"></table></div>
+        <p class="tnote">The 2027 column matches the itemised budgets in each workstream chapter. Tasks marked CLARIAH are led by CLARIAH.</p>
+      </figure>
+      <figure class="ftab">
+        <figcaption><b>Table 2.</b> Revenues and structural funding, in thousands of euros</figcaption>
+        <div class="tscroll" tabindex="0" role="region" aria-label="Table 2, scrollable"><table class="ft rt num" id="revTable"></table></div>
+      </figure>
     </div>
   </div>
 </section>
@@ -737,7 +784,7 @@ html.pdf .band h2{font-size:52px}
 </footer>
 
 
-<script src="content.js?v=20261104a"></script>
+<script src="content.js?v=20261104b"></script>
 <script>
 const eur=n=>"€"+n.toLocaleString("en-GB");
 const PDF=/[?&]pdf\b/.test(location.search);if(PDF)document.documentElement.classList.add("pdf");
@@ -840,6 +887,17 @@ document.querySelectorAll("#chapters [role=tablist]").forEach(tl=>{
 
 /* finance */
 document.getElementById("finText").innerHTML=paras(FINANCE,"sec-lede");
+/* Tables 1 and 2 */
+(function(){
+  const k=v=>typeof v==="number"?(v<0?`<span class="neg">−${Math.abs(Math.round(v)).toLocaleString("en-GB")}</span>`:Math.round(v).toLocaleString("en-GB")):v;
+  const Y=FIN_TABLE.years,c27=i=>Y[i]==="2027"?" y27":"";
+  const ft=document.getElementById("finTable");let last="";
+  ft.innerHTML=`<thead><tr><th scope="col">Task</th><th scope="col">Workstream</th><th scope="col">SSHOC-NL tasks</th><th scope="col">Macroscope tasks</th><th scope="col">Other projects</th><th scope="col">2025 core</th><th scope="col">2026 core</th><th scope="col">2027 core</th>${Y.map((y,i)=>`<th scope="col" class="n${c27(i)}">${y}</th>`).join("")}</tr></thead>
+  <tbody>${FIN_TABLE.rows.map(r=>{const w=r[1]?wsOf(r[1]):null,g=r[1]!==last;last=r[1];
+    return `<tr${g?' class="grp"':""}><th scope="row">${r[0]}</th><td>${w?`<span class="ws"><i style="background:${w.color}"></i>${w.name}</span>`:""}</td>${r.slice(2,8).map(c=>`<td>${c}</td>`).join("")}${r.slice(8).map((v,i)=>`<td class="n${c27(i)}">${k(v)}</td>`).join("")}</tr>`}).join("")}</tbody>
+  <tfoot><tr><th scope="row">Total</th><td colspan="7"></td>${FIN_TABLE.total.map((v,i)=>`<td class="n${c27(i)}">${k(v)}</td>`).join("")}</tr></tfoot>`;
+  document.getElementById("revTable").innerHTML=`<thead><tr><th scope="col"><span class="sr">Item</span></th>${Y.map((y,i)=>`<th scope="col" class="n${c27(i)}">${y}</th>`).join("")}</tr></thead><tbody>${REV_TABLE.map(r=>r?`<tr><th scope="row">${r[0]}</th>${r[1].map((v,i)=>`<td class="n${c27(i)}">${k(v)}</td>`).join("")}</tr>`:`<tr class="gap"><td colspan="5"></td></tr>`).join("")}</tbody>`;
+})();
 const fr=document.getElementById("finRows"),maxW=Math.max(...WS.map(w=>w.total));
 fr.innerHTML=WS.map((w,i)=>`<div class="fin-row" data-open="false"><button type="button" aria-expanded="false"><span class="nm"><i class="sq" style="background:${w.color}"></i>${w.name}</span><i class="bar gbar" style="width:${w.total/maxW*100}%;background:${w.color}"></i><span class="v num">${eur(w.total)}<small>${pct(w.total)}</small></span><i class="chev" aria-hidden="true"></i></button><div class="items">${w.items.map(it=>`<div class="num"><span>${it[0]}</span><b>${eur(it[1])}</b></div>`).join("")}</div></div>`).join("")+
  `<div class="fin-row"><button type="button" disabled style="cursor:default"><span class="nm">Total</span><span></span><span class="v num">${eur(TOTAL)}<small>To confirm against Table 1</small></span><span></span></button></div>`;

@@ -52,7 +52,6 @@ Push to the `main` branch of `odissei-data/Annual-Plan-2027` and enable GitHub P
 ## Still to add
 
 - Message from the Chair (450 to 500 words) and a portrait
-- Financial plan Table 1: tasks, amounts and funding sources
 - The risk table and a link to the full risk register
 - KPI values and targets (marked in square brackets)
 - Final photos with credits (stock placeholders are marked "[credit to be confirmed]")
