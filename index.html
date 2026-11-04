@@ -966,9 +966,6 @@ const fr=document.getElementById("finRows"),maxW=Math.max(...WS.map(w=>w.total))
 fr.innerHTML=WS.map((w,i)=>`<div class="fin-row" data-open="false"><button type="button" aria-expanded="false"><span class="nm"><i class="sq" style="background:${w.color}"></i>${w.name}</span><i class="bar gbar" style="width:${w.total/maxW*100}%;background:${w.color}"></i><span class="v num">${eur(w.total)}<small>${pct(w.total)}</small></span><i class="chev" aria-hidden="true"></i></button><div class="items">${w.items.map(it=>`<div class="num"><span>${it[0]}</span><b>${eur(it[1])}</b></div>`).join("")}</div></div>`).join("")+
  `<div class="fin-row"><button type="button" disabled style="cursor:default"><span class="nm">Total</span><span></span><span class="v num">${eur(TOTAL)}<small>To confirm against Table 1</small></span><span></span></button></div>`;
 fr.querySelectorAll(".fin-row>button:not([disabled])").forEach(b=>b.addEventListener("click",()=>{const r=b.parentElement,o=r.dataset.open!=="true";r.dataset.open=o;b.setAttribute("aria-expanded",o)}));
-/* open the first workstream's breakdown when the financial plan scrolls into view */
-const finIO=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){finIO.disconnect();const r=fr.querySelector(".fin-row"),btn=r.querySelector("button");if(r.dataset.open!=="true"){r.dataset.open="true";btn.setAttribute("aria-expanded","true");r.querySelector(".items").classList.add("fade")}}},{threshold:.35});
-finIO.observe(fr);
 
 /* kpis */
 document.getElementById("kpiIntro").textContent=KPI_INTRO;
