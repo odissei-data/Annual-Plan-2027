@@ -236,6 +236,43 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .ft tfoot th,.ft tfoot td{font-weight:500;color:#fff;border-bottom:0;background:rgba(255,255,255,.06)}
 .ft .neg{color:#ffb4a8}
 .ft tr.gap td{border-bottom:0;padding:6px}
+.fx-bar{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:12px}
+.fx-bar .tnote{margin:0}
+.fx-all{background:none;border:1px solid var(--dark-line);color:var(--on-dark-text);border-radius:var(--r-pill);padding:6px 14px;font:500 13px var(--sans);cursor:pointer}
+.fx-all:hover{background:var(--dark-hover)}
+.fx{border:1px solid var(--dark-line);border-radius:var(--r-lg);overflow:hidden}
+.fx-row{display:grid;grid-template-columns:minmax(0,1fr) repeat(4,minmax(64px,96px)) 28px;gap:12px;align-items:center;padding:12px 18px}
+.fx-row .y{text-align:right;font-size:14px;color:var(--on-dark-text)}
+.fx-row .y.y27{color:#fff;font-weight:500}
+.fx-head{font-size:12.5px;color:var(--on-dark-muted);border-bottom:1px solid var(--dark-line);padding-block:10px}
+.fx-head .y{font-size:12.5px;color:var(--on-dark-muted)}
+.fx-head .y.y27{color:var(--cyan)}
+.fx-g+.fx-g{border-top:1px solid var(--dark-line)}
+.fx-g>button{width:100%;background:none;border:0;cursor:pointer;text-align:left;font:inherit;color:inherit}
+.fx-g>button:hover{background:var(--dark-hover)}
+.fx-g>button:focus-visible{outline:2px solid var(--cyan);outline-offset:-2px}
+.fx-g .nm{display:flex;align-items:center;gap:10px;font-size:16px;font-weight:500;color:#fff}
+.fx-g .nm small{font-size:12.5px;font-weight:400;color:var(--on-dark-muted)}
+.fx-g .nm i{width:10px;height:10px;display:block;flex:none}
+.fx-g .chev{width:10px;height:10px;border-right:2px solid var(--on-dark-muted);border-bottom:2px solid var(--on-dark-muted);transform:rotate(45deg);margin-top:-4px;justify-self:center;transition:transform .3s var(--ease)}
+.fx-g[data-open="true"] .chev{transform:rotate(-135deg);margin-top:4px}
+.fx-tasks{display:none;background:rgba(0,0,0,.14);border-top:1px solid var(--dark-line)}
+.fx-g[data-open="true"] .fx-tasks{display:block}
+.fx-t{padding-block:12px}
+.fx-t+.fx-t{border-top:1px solid var(--dark-line)}
+.fx-t .tn{font-size:15px;color:#fff;padding-left:20px}
+.fx-fund{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px;padding-left:20px;margin-top:-2px}
+.fx-fund span{font-size:12.5px;color:var(--on-dark-text);border:1px solid var(--dark-line);border-radius:var(--r-pill);padding:2px 10px}
+.fx-fund b{font-weight:500;color:var(--on-dark-muted);margin-right:4px}
+.fx-yrs{display:none}
+.fx-total{border-top:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.06)}
+.fx-total .nm{font-weight:500;color:#fff}
+@media (max-width:640px){
+  .fx-row{grid-template-columns:minmax(0,1fr) 72px 20px;padding-inline:14px}
+  .fx-row .y:not(.y27){display:none}
+  .fx-yrs{display:block;grid-column:1/-1;font-size:12.5px;color:var(--on-dark-muted);padding-left:20px}
+  .fx-g>button .fx-yrs{padding-left:20px}
+}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .tnote{font-size:13.5px;color:var(--on-dark-muted);margin-top:10px}
 .fund p{font-size:15px;color:var(--on-dark-muted);margin-top:20px;line-height:1.6}
@@ -565,6 +602,22 @@ html.pdf .band h2{font-size:52px}
   .fin-row .chev{display:none}
   .ftables{gap:8mm;margin-top:8mm}
   .ftab{break-inside:avoid}
+  .fx-all,.fx-bar{display:none}
+  .fx{border-color:var(--line-soft);border-radius:0}
+  .fx-row{grid-template-columns:minmax(0,1fr) repeat(4,16mm) 0!important;gap:3mm;padding:1.6mm 3mm}
+  .fx-row .y{display:block!important;font-size:8pt;color:var(--ink)!important}
+  .fx-head,.fx-head .y{color:var(--ink-muted)!important;border-color:var(--line-soft)}
+  .fx-head .y.y27{color:var(--petrol)!important}
+  .fx-g+.fx-g,.fx-t+.fx-t,.fx-tasks{border-color:var(--line-soft)}
+  .fx-g .nm,.fx-t .tn,.fx-total .nm{color:var(--ink);font-size:8.5pt}
+  .fx-g .nm small{color:var(--ink-muted)}
+  .fx-g .chev,.fx-yrs{display:none!important}
+  .fx-tasks{display:block!important;background:#f7fafc}
+  .fx-t{padding-block:1mm}
+  .fx-fund{gap:1mm;margin-top:0}
+  .fx-fund span{font-size:6.8pt;color:var(--ink);border-color:var(--line-soft);padding:0 1.5mm}
+  .fx-fund b{color:var(--ink-muted)}
+  .fx-total{background:var(--tint);border-top-color:var(--line)}
   .ftab figcaption{color:var(--ink);font-size:10.5pt}
   .ftab figcaption b{color:var(--petrol)}
   .tscroll{overflow:visible;border-color:var(--line-soft);border-radius:0}
@@ -730,8 +783,8 @@ html.pdf .band h2{font-size:52px}
     <div class="ftables">
       <figure class="ftab">
         <figcaption><b>Table 1.</b> Planned expenditure per task and its funding, in thousands of euros</figcaption>
-        <div class="tscroll" tabindex="0" role="region" aria-label="Table 1, scrollable"><table class="ft num" id="finTable"></table></div>
-        <p class="tnote">The 2027 column matches the itemised budgets in each workstream chapter. Tasks marked CLARIAH are led by CLARIAH.</p>
+        <div class="fx-bar"><p class="tnote">Open a workstream to see its tasks and how each one is funded. The 2027 column matches the itemised budgets in the chapters.</p><button type="button" class="fx-all" aria-pressed="false">Expand all</button></div>
+        <div class="fx num" id="finTable"></div>
       </figure>
       <figure class="ftab">
         <figcaption><b>Table 2.</b> Revenues and structural funding, in thousands of euros</figcaption>
@@ -784,7 +837,7 @@ html.pdf .band h2{font-size:52px}
 </footer>
 
 
-<script src="content.js?v=20261104b"></script>
+<script src="content.js?v=20261104c"></script>
 <script>
 const eur=n=>"€"+n.toLocaleString("en-GB");
 const PDF=/[?&]pdf\b/.test(location.search);if(PDF)document.documentElement.classList.add("pdf");
@@ -891,11 +944,22 @@ document.getElementById("finText").innerHTML=paras(FINANCE,"sec-lede");
 (function(){
   const k=v=>typeof v==="number"?(v<0?`<span class="neg">−${Math.abs(Math.round(v)).toLocaleString("en-GB")}</span>`:Math.round(v).toLocaleString("en-GB")):v;
   const Y=FIN_TABLE.years,c27=i=>Y[i]==="2027"?" y27":"";
-  const ft=document.getElementById("finTable");let last="";
-  ft.innerHTML=`<thead><tr><th scope="col">Task</th><th scope="col">Workstream</th><th scope="col">SSHOC-NL tasks</th><th scope="col">Macroscope tasks</th><th scope="col">Other projects</th><th scope="col">2025 core</th><th scope="col">2026 core</th><th scope="col">2027 core</th>${Y.map((y,i)=>`<th scope="col" class="n${c27(i)}">${y}</th>`).join("")}</tr></thead>
-  <tbody>${FIN_TABLE.rows.map(r=>{const w=r[1]?wsOf(r[1]):null,g=r[1]!==last;last=r[1];
-    return `<tr${g?' class="grp"':""}><th scope="row">${r[0]}</th><td>${w?`<span class="ws"><i style="background:${w.color}"></i>${w.name}</span>`:""}</td>${r.slice(2,8).map(c=>`<td>${c}</td>`).join("")}${r.slice(8).map((v,i)=>`<td class="n${c27(i)}">${k(v)}</td>`).join("")}</tr>`}).join("")}</tbody>
-  <tfoot><tr><th scope="row">Total</th><td colspan="7"></td>${FIN_TABLE.total.map((v,i)=>`<td class="n${c27(i)}">${k(v)}</td>`).join("")}</tr></tfoot>`;
+  /* Table 1 as expandable workstreams: subtotals per year, tasks and their funding inside */
+  const ft=document.getElementById("finTable");
+  const groups=[...WS.map(w=>({id:w.id,name:w.name,color:w.color})),{id:"",name:"CLARIAH",color:"#7f97a1",note:"Tasks led by CLARIAH"}];
+  const cell=(v,i,tag="span")=>`<${tag} class="y${c27(i)}">${k(v)}</${tag}>`;
+  const yrsLine=vals=>`<span class="fx-yrs">${Y.map((y,i)=>y==="2027"?"":`${y}: ${k(vals[i])}`).filter(Boolean).join(" · ")}</span>`;
+  const fund=r=>{const f=[["SSHOC-NL",r[2]],["Macroscope",r[3]],["Other projects",r[4]],["2025 core",r[5]],["2026 core",r[6]],["2027 core",r[7]]].filter(x=>x[1]);
+    return f.length?`<div class="fx-fund">${f.map(x=>`<span><b>${x[0]}</b>${x[1]}</span>`).join("")}</div>`:""};
+  ft.innerHTML=`<div class="fx-row fx-head" aria-hidden="true"><span>Workstream and task</span>${Y.map((y,i)=>`<span class="y${c27(i)}">${y}</span>`).join("")}<span></span></div>`+
+   groups.map((g,gi)=>{const rows=FIN_TABLE.rows.filter(r=>r[1]===g.id);const sums=Y.map((_,i)=>rows.reduce((a,r)=>a+r[8+i],0));
+    return `<div class="fx-g" data-open="false"><button type="button" class="fx-row" aria-expanded="false" aria-controls="fx${gi}"><span class="nm"><i style="background:${g.color}"></i>${g.name} <small>${rows.length} task${rows.length>1?"s":""}</small></span>${sums.map((v,i)=>cell(v,i)).join("")}<span class="chev" aria-hidden="true"></span>${yrsLine(sums)}</button>
+     <div class="fx-tasks" id="fx${gi}">${rows.map(r=>`<div class="fx-row fx-t"><span class="tn">${g.id?r[0]:g.note}</span>${r.slice(8).map((v,i)=>cell(v,i)).join("")}<span></span>${yrsLine(r.slice(8))}${fund(r)}</div>`).join("")}</div></div>`}).join("")+
+   `<div class="fx-row fx-total"><span class="nm">Total</span>${FIN_TABLE.total.map((v,i)=>cell(v,i)).join("")}<span></span>${yrsLine(FIN_TABLE.total)}</div>`;
+  const setG=(g,o)=>{g.dataset.open=o;g.querySelector("button").setAttribute("aria-expanded",o)};
+  ft.querySelectorAll(".fx-g>button").forEach(b=>b.addEventListener("click",()=>{const g=b.parentElement;setG(g,g.dataset.open!=="true")}));
+  const all=document.querySelector(".fx-all");
+  all.addEventListener("click",()=>{const o=all.getAttribute("aria-pressed")!=="true";all.setAttribute("aria-pressed",o);all.textContent=o?"Collapse all":"Expand all";ft.querySelectorAll(".fx-g").forEach(g=>setG(g,o))});
   document.getElementById("revTable").innerHTML=`<thead><tr><th scope="col"><span class="sr">Item</span></th>${Y.map((y,i)=>`<th scope="col" class="n${c27(i)}">${y}</th>`).join("")}</tr></thead><tbody>${REV_TABLE.map(r=>r?`<tr><th scope="row">${r[0]}</th>${r[1].map((v,i)=>`<td class="n${c27(i)}">${k(v)}</td>`).join("")}</tr>`:`<tr class="gap"><td colspan="5"></td></tr>`).join("")}</tbody>`;
 })();
 const fr=document.getElementById("finRows"),maxW=Math.max(...WS.map(w=>w.total));
