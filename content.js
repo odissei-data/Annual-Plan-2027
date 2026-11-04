@@ -75,8 +75,8 @@ const WS=[
    {t:"Fieldwork transition",s:"Self-administered surveys must not break long time series.",full:`The shift from face-to-face to self-administered surveys must not break long time series.`},
    {t:"Legal and technical hurdles",s:"Media data have many owners, and EU rules are changing.",full:`Media data come from many owners with different licences and formats, and changing EU rules on platforms and privacy affect data donation and sensitive data.`},
    {key:true,t:"PANL must prove itself",s:"It needs researchers and participants at scale after a slow restart.",full:`After a slower-than-planned restart, PANL needs to attract researchers and participants at scale.`}],
-  items:[["Data collections: international surveys",773953],["Online panels: LISS and PANL",1081160,"incl. €216,410 PANL and €384,750 LISS interfaces"],["Netherlands Media Corpus",518913]],
-  budgetText:`The planned 2027 expenditure for the Observatory is €2,374,026. Part of this total budget will be directed to data collections, to support international surveys and innovations, totalling €773,953. The investment in maintenance and improvements of Online Panels amounts to €1,081,160, including €216,410 for the launch and maintenance of PANL, and €384,750 for improving LISS user interfaces. The planned expenditure on the Netherlands Media Corpus is €518,913 for Web and Media diets collection and the first NMC pilots.`},
+  items:[["Data collections: international surveys",773953],["Online panels: LISS and PANL",1782760,"incl. €216,410 PANL and €384,750 LISS interfaces"],["Netherlands Media Corpus",518913]],
+  budgetText:`The planned 2027 expenditure for the Observatory is €3,075,626. Part of this total budget will be directed to data collections, to support international surveys and innovations, totalling €773,953. The investment in maintenance and improvements of Online Panels amounts to €1,782,760, including €216,410 for the launch and maintenance of PANL, and €384,750 for improving LISS user interfaces. The planned expenditure on the Netherlands Media Corpus is €518,913 for Web and Media diets collection and the first NMC pilots.`},
 
  {id:"laboratory",name:"Laboratory",color:"var(--ws-lab)",img:"img/odissei-network.jpg",alt:"Researchers talking during a break at the ODISSEI Conference",credit:"Photo: nelinadasha.com",
   head:`New tools for studying life in a <span class="hl">digital, connected</span> society`,
@@ -109,8 +109,8 @@ const WS=[
    {t:"Dependence on other launches",s:"A first PANL experiment waits for PANL to open.",full:`A first experiment on PANL can only start once PANL opens to the wider research community.`},
    {t:"Network data are very sensitive",s:"Privacy protection for network data is less developed.",full:`Privacy protection for network data is less developed than for other data types, and all tools must run in secure environments.`},
    {key:true,t:"Finding skilled staff",s:"Developers and research engineers are hard to recruit.",full:`Recruiting developers and research engineers is difficult and partly depends on co-funding, which may mean reducing the scope of some work.`}],
-  items:[["Data donation (D3I)",768406],["Mass online experiments",176146],["Large network tools (PLANET-NL)",572563]],
-  budgetText:`Planned 2027 expenditure is €1,517,406. Of this total budget, €768,406 will be allocated to upgrading the Data Donation facilities, ensuring the delivery of the D3I platform as a full service. Investments in mass online experiments will amount to €176,146, ensuring that the online experiments platform will be operational and ready for use. Finally, a budget of €572,563 will be allocated to securely leverage large network tools.`},
+  items:[["Data donation (D3I)",768697],["Mass online experiments",176146],["Large network tools (PLANET-NL)",620762]],
+  budgetText:`Planned 2027 expenditure is €1,565,604. Of this total budget, €768,697 will be allocated to upgrading the Data Donation facilities, ensuring the delivery of the D3I platform as a full service. Investments in mass online experiments will amount to €176,146, ensuring that the online experiments platform will be operational and ready for use. Finally, a budget of €620,762 will be allocated to securely leverage large network tools.`},
 
  {id:"hub",name:"Hub",color:"var(--ws-hub)",img:"img/hub.jpg",alt:"Two researchers working together at a table",credit:"Photo: [credit to be confirmed]",
   head:`The people behind the <span class="hl">infrastructure</span>`,
@@ -143,12 +143,12 @@ const WS=[
    {key:true,t:"Missing guidance",s:"No written policies yet on some recurring questions.",full:`There are no written policies yet on some recurring questions, such as requests for data from people outside academia, for example, journalists, or the use of AI language models with sensitive data. A data protection impact assessment promised at the start of Macroscope still has to be carried out.`},
    {t:"Training needs more hours",s:"Staff time does not match the training work needed.",full:`Staff time for the SSHOC-NL training work does not match the work needed, and interest in the new curriculum still has to be tested.`},
    {t:"Keeping a large partnership on track",s:"77% of first task plans arrived on time in 2026.",full:`In 2026, 77% of first task plan versions arrived on time, and reaching a quorum at Project Board meetings was difficult because decisions require unanimity.`}],
-  items:[["Coordination and shared reporting",848569],["Education and training",469769],["Support: front desk, SoDa, ethics",1084406]],
-  budgetText:`Planned 2027 expenditure is €2,402,744. Of these resources, €848,569 will support cross-infrastructure Coordination and shared reporting activities. €469,769 is directed towards educational activities, such as development and delivery of the training programmes or ODISSEI Summer School. Finally, €1,084,406 will finance a wide array of support activities, ranging from front desk support and SoDa team methodological support to ethical support.`}
+  items:[["Coordination and shared reporting",848569],["Education and training",469769],["Support: front desk, SoDa, ethics",1224168]],
+  budgetText:`Planned 2027 expenditure is €2,542,505. Of these resources, €848,569 will support cross-infrastructure Coordination and shared reporting activities. €469,769 is directed towards educational activities, such as development and delivery of the training programmes or ODISSEI Summer School. Finally, €1,224,168 will finance a wide array of support activities, ranging from front desk support and SoDa team methodological support to ethical support.`}
 ];
 
 /* Budget totals as stated in the plan (line items are checked against these) */
-const STATED={data:3052182,observatory:2374026,laboratory:1517406,hub:2402744};
+const STATED={data:3052182,observatory:3075626,laboratory:1565604,hub:2542505};
 
 /* Dated milestones (m = month index, 0 = January) */
 const MS=[

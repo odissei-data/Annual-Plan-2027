@@ -57,4 +57,4 @@ Push to the `main` branch of `odissei-data/Annual-Plan-2027` and enable GitHub P
 - KPI values and targets (marked in square brackets)
 - Final photos with credits (stock placeholders are marked "[credit to be confirmed]")
 - Voices from the community: portraits and quotes from the Early Career Day
-- Laboratory budget: the line items add up to €1,517,115, the draft states €1,517,406
+- Budget check: the Laboratory and Hub line items each add up to €1 more than the stated totals (€1,565,605 vs €1,565,604; €2,542,506 vs €2,542,505)
