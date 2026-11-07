@@ -115,22 +115,18 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .fade{animation:fade .45s var(--ease)}
 @keyframes fade{from{opacity:.2;transform:translateY(6px)}to{opacity:1;transform:none}}
 
-/* ---------- year ---------- */
-.tl{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px;position:relative}
-.tl::before{content:"";position:absolute;left:0;right:0;top:7px;height:2px;background:var(--petrol);opacity:.35}
-.tl li{position:relative;padding-top:32px;display:grid;gap:10px;align-content:start}
-.tl li::before{content:"";position:absolute;top:0;left:0;width:16px;height:16px;background:var(--node,var(--petrol));box-shadow:0 0 0 4px var(--tint),0 0 0 5px var(--line)}
-.tl .when{font-size:14px;font-weight:500;color:var(--teal-text)}
-.tl h3{font-size:17px;line-height:1.35}
-.tl p{font-size:14px;line-height:1.5;color:var(--ink-muted)}
-.tl .ws{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-muted);margin-top:2px}
-.tl .ws i{width:9px;height:9px;box-shadow:0 0 0 1px var(--line)}
-
 /* ---------- chair + why ---------- */
-.chair{display:grid;grid-template-columns:160px minmax(0,1fr);gap:clamp(24px,3vw,40px);align-items:center;padding:clamp(24px,3vw,36px);margin-top:32px;max-width:980px}
-.chair .portrait{aspect-ratio:1;border-radius:var(--r-lg);background:var(--tint);display:grid;place-items:center;font-size:14px;color:var(--ink-muted)}
+.chair{display:grid;grid-template-columns:200px minmax(0,1fr);gap:clamp(24px,3vw,48px);align-items:start;padding:clamp(24px,3vw,36px);margin-top:32px;max-width:980px}
+.chair .portrait{margin:0;display:grid;gap:12px;align-content:start}
+.chair .portrait img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r-lg);background:var(--tint)}
+.chair .portrait figcaption{display:grid;gap:2px;font-size:14px;line-height:1.4;color:var(--ink-muted)}
+.chair .portrait figcaption b{font-size:16px;font-weight:500;color:var(--ink)}
+.chair .quote{padding-left:20px;border-left:3px solid var(--cyan);margin-bottom:24px}
+.chair .letter p{font-size:17px;line-height:1.65;max-width:68ch;margin-top:14px}
+.chair .letter p:first-child{margin-top:0}
+.chair .sign{margin-top:22px;font-size:15px;color:var(--ink-muted)}
+.chair .sign b{display:block;font-weight:500;color:var(--ink)}
 .quote{font-size:clamp(20px,2vw,24px);line-height:1.4;color:var(--petrol);font-weight:500;max-width:46ch}
-.placeholder{margin-top:12px;font-size:15px;color:var(--ink-muted);max-width:60ch}
 .why-top{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(32px,4vw,56px);align-items:start;margin-top:24px}
 .why-top .photo{margin:0;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/3}
 .why-top .photo img{width:100%;height:100%;object-fit:cover}
@@ -179,11 +175,6 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .status .kpi strong{font-size:clamp(40px,4.4vw,60px);font-weight:500;color:var(--petrol);letter-spacing:-.03em;line-height:1}
 .status .kpi span{font-size:15px;color:var(--ink-muted);max-width:30ch}
 .status p{font-size:16px;line-height:1.65;max-width:68ch}
-.hard{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.hard .card{padding:20px 22px;display:grid;gap:6px}
-.hard h3{font-size:17px;display:flex;align-items:center;gap:10px}
-.hard h3::before{content:"";width:8px;height:8px;border:2px solid var(--petrol);flex:none}
-.hard p{font-size:15px;color:var(--ink-muted);line-height:1.5}
 .budget{position:sticky;top:88px;padding:28px;border-radius:var(--r-lg);background:var(--dark);color:var(--on-dark-text)}
 .budget h3{font-size:14px;color:var(--on-dark-muted);font-weight:500}
 .budget .tot{font-size:clamp(34px,3.2vw,44px);font-weight:500;color:#fff;letter-spacing:-.02em;margin-top:6px;line-height:1.1}
@@ -307,14 +298,6 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .kq[aria-expanded="true"] .more{display:block}
 .kq .hint{font-size:13px;color:var(--teal-text);font-weight:500}
 
-/* ---------- risks ---------- */
-.risks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:48px}
-.risk{padding:30px;display:grid;gap:14px;align-content:start}
-.risk h3{font-size:22px;line-height:1.3}
-.risk p{font-size:16px;line-height:1.6}
-.risk .mit{padding:16px 18px;border-radius:var(--r-sm);background:var(--tint);font-size:15px}
-.risk .mit b{font-weight:500;color:var(--petrol)}
-
 /* ---------- governance ---------- */
 .gov{margin-top:40px}
 .people{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:22px}
@@ -359,7 +342,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .intro-block h3{font-size:22px;margin-bottom:12px}
 .intro-block .p{font-size:17px;line-height:1.65;max-width:72ch}
 .status .p{font-size:16px;line-height:1.65;max-width:72ch}
-.plan .rm-more p,.cap .rm-more p,.risk .rm-more p{font-size:15px;line-height:1.6;color:var(--ink);margin-top:10px}
+.plan .rm-more p,.cap .rm-more p{font-size:15px;line-height:1.6;color:var(--ink);margin-top:10px}
 .bnote{margin-top:22px}
 .bnote .rm-more p{font-size:14px;line-height:1.6;color:var(--on-dark-text);margin-top:0;margin-bottom:6px}
 .bnote .rm-btn{margin-top:0}
@@ -395,26 +378,9 @@ canvas{display:block;width:100%;height:100%}
 .meter i{width:8px;height:8px;background:var(--dark-line)}
 .meter i.f{background:var(--c)}
 
-/* ---------- voices ---------- */
-.voices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,40px);margin-top:clamp(48px,6vw,72px);align-items:start}
-.voice{display:grid;gap:18px;align-content:start}
-.voice:nth-child(2){margin-top:clamp(0px,5vw,64px)}
-.head-wrap{position:relative;aspect-ratio:1/1;max-width:300px}
-.head-wrap .tile{position:absolute;inset:22% 0 0 0;background:var(--dark);border-radius:var(--r-lg);overflow:hidden}
-.head-wrap .tile canvas{position:absolute;inset:0}
-.head-wrap img{position:absolute;left:8%;right:8%;bottom:0;width:84%;height:auto;max-height:100%;object-fit:contain;object-position:bottom;filter:drop-shadow(0 12px 24px rgba(13,45,58,.35))}
-.head-wrap .ph{position:absolute;left:18%;right:18%;top:0;aspect-ratio:1;border-radius:50%;border:2px dashed var(--teal);background:var(--tint);display:grid;place-items:center;text-align:center;font-size:13px;color:var(--teal-text);padding:18px;line-height:1.35}
-.voice blockquote{margin:0;font-size:clamp(19px,1.7vw,22px);line-height:1.4;color:var(--petrol);font-weight:500}
-.voice .who{font-size:15px;color:var(--ink)}
-.voice .who b{display:block;font-weight:500}
-.voice .who span{color:var(--ink-muted)}
-.voice .uses{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--teal-text);font-weight:500}
-
 /* ---------- responsive ---------- */
 @media (max-width:1100px){
   .nav .title{display:none}
-  .tl{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:32px}
-  .tl::before{display:none}
   .caps{grid-template-columns:repeat(2,minmax(0,1fr))}
   .people{grid-template-columns:repeat(3,minmax(0,1fr))}
   .numbers{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -430,9 +396,6 @@ canvas{display:block;width:100%;height:100%}
   .hero .photo::after{background:rgba(13,45,58,.74)}
   .hero .pxhero{opacity:.45}
   .band-field{width:100%;opacity:.35}
-  .voices{grid-template-columns:minmax(0,1fr)}
-  .voice:nth-child(2){margin-top:0}
-  .head-wrap{max-width:240px}
   .gallery{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;grid-auto-rows:150px}
   .gallery .ga{grid-column:1/3;grid-row:auto;height:220px}
   .gallery .gb,.gallery .gc,.gallery .gd,.gallery .ge{grid-column:auto;grid-row:auto}
@@ -442,13 +405,12 @@ canvas{display:block;width:100%;height:100%}
   .detail{grid-template-columns:minmax(0,1fr)}
   .detail .pic{min-height:0;aspect-ratio:16/7}
   .budget{position:static}
-  .risks{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:640px){
-      .plans,.hard,.caps,.projects,.tl,.keys{grid-template-columns:minmax(0,1fr)}
+      .plans,.caps,.projects,.keys{grid-template-columns:minmax(0,1fr)}
   .full-list{padding:4px 20px}
   .chair{grid-template-columns:minmax(0,1fr)}
-  .chair .portrait{width:96px}
+  .chair .portrait{grid-template-columns:96px minmax(0,1fr);align-items:center}
   .kpis{grid-template-columns:minmax(0,1fr)}
   .kt summary{padding:18px 20px;grid-template-columns:28px minmax(0,1fr) 20px;gap:12px}
   .kt-body{padding:4px 20px 22px 20px}
@@ -507,18 +469,16 @@ html.pdf .band h2{font-size:52px}
   .foot{break-before:page;display:flex;align-items:flex-end}
   .foot .wrap{padding:16mm 15mm!important}
   /* page structure */
-  #glance,#year,#chair,#why,#voices,#finance,#kpis,#risks,#governance{break-before:page}
-  #voices{padding-top:0!important}
-  #voices .sec-title,#voices .sec-lede{break-after:avoid}
-  .voices{break-inside:avoid}
-  #voices .sec-lede{margin-top:3mm}
+  #glance,#chair,#why,#finance,#kpis,#governance{break-before:page}
   /* chair: an opening page of its own */
-  #chair .wrap{display:flex;flex-direction:column;min-height:255mm}
   #chair .sec-title{font-size:30pt}
-  .chair{display:grid!important;grid-template-columns:62mm minmax(0,1fr)!important;gap:10mm;align-items:start;margin-top:12mm;padding:0;border:0!important;max-width:none}
-  .chair .portrait{width:62mm;aspect-ratio:4/5;border-radius:var(--r-lg)}
-  .chair .quote{font-size:22pt;line-height:1.3;max-width:none;padding-left:7mm;border-left:3px solid var(--cyan)}
-  .chair .placeholder{font-size:11pt;max-width:none;margin-top:8mm}
+  .chair{display:grid!important;grid-template-columns:45mm minmax(0,1fr)!important;gap:9mm;align-items:start;margin-top:10mm;padding:0;border:0!important;max-width:none}
+  .chair .portrait{width:45mm}
+  .chair .portrait figcaption{font-size:9.5pt}
+  .chair .portrait figcaption b{font-size:11pt}
+  .chair .quote{font-size:16pt;line-height:1.3;max-width:none;padding-left:6mm;margin-bottom:6mm}
+  .chair .letter p{font-size:10.5pt;line-height:1.55;max-width:none;margin-top:3mm}
+  .chair .sign{display:none}
   /* at a glance, printed as four summaries */
   #glance,#finance{color:var(--ink)}
   #glance .sec-title,#finance .sec-title,#finance h3{color:var(--petrol)}
@@ -540,16 +500,7 @@ html.pdf .band h2{font-size:52px}
   .gl-print ul{list-style:none;margin:0;padding:0;display:grid;gap:1.5mm}
   .gl-print li{display:grid;grid-template-columns:10px 1fr;gap:3mm;font-size:9.5pt;line-height:1.4}
   .gl-print li::before{content:"";width:6px;height:6px;margin-top:5px;background:var(--c)}
-  /* year, why, voices */
-  .tl{display:block!important;margin-top:10mm}
-  .tl::before{display:none}
-  .tl li{break-inside:avoid;display:grid;grid-template-columns:42mm minmax(0,1fr);column-gap:6mm;row-gap:1.5mm;padding:4.5mm 0 4.5mm 7mm;border-top:1px solid var(--line-soft)}
-  .tl li:last-child{border-bottom:1px solid var(--line-soft)}
-  .tl li::before{box-shadow:none;top:5.8mm;width:9px;height:9px}
-  .tl .when{grid-row:1/4;font-size:13pt}
-  .tl li>:not(.when){grid-column:2}
-  .tl h3{font-size:14pt}
-  .tl p{font-size:10.5pt}
+  /* why */
   .gallery{grid-template-columns:repeat(12,minmax(0,1fr))!important;grid-template-rows:repeat(2,50mm)!important;grid-auto-rows:auto!important;margin-top:8mm}
   .gallery .ga{grid-column:1/7!important;grid-row:1/3!important;height:auto!important}.gallery .gb{grid-column:7/10!important;grid-row:1/2!important}.gallery .gc{grid-column:10/13!important;grid-row:1/2!important}.gallery .gd{grid-column:7/11!important;grid-row:2/3!important}.gallery .ge{grid-column:11/13!important;grid-row:2/3!important}
   .caps-wrap{margin-top:8mm}
@@ -561,11 +512,6 @@ html.pdf .band h2{font-size:52px}
   .why-projects{grid-template-columns:minmax(0,1fr)!important;margin-top:8mm;break-inside:avoid}
   .numbers{grid-template-columns:repeat(5,minmax(0,1fr))!important;margin-top:8mm;padding-top:6mm;break-inside:avoid}
   .numbers strong{font-size:20pt}
-  .voices{grid-template-columns:repeat(3,minmax(0,1fr))!important;margin-top:14mm;gap:8mm}
-  .voice{break-inside:avoid}
-  .head-wrap{max-width:58mm}
-  .voice:nth-child(2){margin-top:0}
-  .voice blockquote{font-size:15pt}
   /* chapters */
   #chapters>section>.sec{padding-top:0!important}
   .chapter{grid-template-columns:minmax(0,1fr)!important}
@@ -638,7 +584,7 @@ html.pdf .band h2{font-size:52px}
   .fund li{color:var(--ink);font-size:9.5pt;line-height:1.4;gap:3mm;grid-template-columns:8px 1fr}
   .fund li::before{width:6px;height:6px;margin-top:5px}
   .fund p{margin-top:3mm}
-  /* kpis, risks, governance */
+  /* kpis, governance */
   .kt{break-inside:avoid}
   .kt summary{padding:4mm 5mm}
   .kt .chev{display:none}
@@ -646,8 +592,6 @@ html.pdf .band h2{font-size:52px}
   .kt-body{padding:0 5mm 5mm 17mm}
   .kt .q{font-size:13pt}
   .kt .full{font-size:10.5pt}
-  .risks{display:none!important}
-  .risks+.full-list{margin-top:8mm}
   #govPrint h3{font-size:13pt}
   #govPrint p{font-size:10pt}
 }
@@ -660,14 +604,12 @@ html.pdf .band h2{font-size:52px}
     <span class="title">Annual Plan 2027</span>
     <div class="links" id="links">
       <a href="#glance">At a glance</a>
-      <a href="#voices">Voices</a>
       <a href="#data">Data</a>
       <a href="#observatory">Observatory</a>
       <a href="#laboratory">Laboratory</a>
       <a href="#hub">Hub</a>
       <a href="#finance">Finance</a>
       <a href="#kpis">KPIs</a>
-      <a href="#risks">Risks</a>
       <a href="#governance">Governance</a>
     </div>
     <button class="pill ghost menu-btn" type="button" aria-expanded="false" aria-controls="links">Sections</button>
@@ -695,6 +637,13 @@ html.pdf .band h2{font-size:52px}
 </header>
 
 <main>
+<section class="sec" id="chair">
+  <div class="wrap">
+    <h2 class="sec-title">Message from the Chair</h2>
+    <div class="chair card" id="chairBox"></div>
+  </div>
+</section>
+
 <section class="sec dark glance" id="glance">
   <div class="wrap">
     <h2 class="sec-title">2027 at a glance</h2>
@@ -705,27 +654,6 @@ html.pdf .band h2{font-size:52px}
       <div class="detail" id="wsDetail" aria-live="polite"></div>
     </div>
     <div class="print-only gl-print" id="glancePrint"></div>
-  </div>
-</section>
-
-<section class="sec tinted year" id="year">
-  <div class="wrap">
-    <h2 class="sec-title">The year ahead</h2>
-    <p class="sec-lede">The commitments in this plan that come with a date. All other plans are due during 2027.</p>
-    <ol class="tl" id="timeline"></ol>
-  </div>
-</section>
-
-<section class="sec" id="chair">
-  <div class="wrap">
-    <h2 class="sec-title">Message from the Chair</h2>
-    <div class="chair card">
-      <div class="portrait" aria-hidden="true"><span>Portrait</span></div>
-      <div>
-        <p class="quote">The Chair’s opening letter introduces the plan and its priorities for 2027.</p>
-        <p class="placeholder">The full message, about 450 to 500 words, has not been drafted yet. It will appear here with a portrait and one highlighted quote.</p>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -753,14 +681,6 @@ html.pdf .band h2{font-size:52px}
       </div>
     </div>
     <div class="numbers num" id="numbers"></div>
-  </div>
-</section>
-
-<section class="sec" id="voices">
-  <div class="wrap">
-    <h2 class="sec-title">Voices from the community</h2>
-    <p class="sec-lede">Researchers who use ODISSEI, in their own words. Portraits and quotes will be collected at the Early Career Day on 4 November 2026.</p>
-    <div class="voices" id="voiceList"></div>
   </div>
 </section>
 
@@ -803,15 +723,7 @@ html.pdf .band h2{font-size:52px}
   </div>
 </section>
 
-<section class="sec" id="risks">
-  <div class="wrap">
-    <h2 class="sec-title">Risk register</h2>
-    <div class="rm intro-rm" id="riskIntro"></div>
-    <div class="risks" id="riskCards"></div>
-  </div>
-</section>
-
-<section class="sec tinted" id="governance">
+<section class="sec" id="governance">
   <div class="wrap">
     <h2 class="sec-title">Governance</h2>
     <div class="rm intro-rm" id="govText"></div>
@@ -837,7 +749,7 @@ html.pdf .band h2{font-size:52px}
 </footer>
 
 
-<script src="content.js?v=20261104d"></script>
+<script src="content.js?v=20261107a"></script>
 <script>
 const eur=n=>"€"+n.toLocaleString("en-GB");
 const PDF=/[?&]pdf\b/.test(location.search);if(PDF)document.documentElement.classList.add("pdf");
@@ -882,12 +794,12 @@ document.querySelectorAll("#wsList button").forEach(b=>b.addEventListener("click
 pick("data");
 document.getElementById("glancePrint").innerHTML=WS.map(w=>`<article style="--c:${w.color}"><div class="hd"><b><i style="background:${w.color}"></i>${w.name}</b><span class="num">${eur(w.total)}<small>${pct(w.total)} of total</small></span></div><div class="meter">${Array.from({length:100},(_,k)=>`<i${k<parseInt(pct(w.total))?' class="f"':""}></i>`).join("")}</div><p>${w.lead}</p><ul>${w.highlights.map(h=>`<li>${h}</li>`).join("")}</ul></article>`).join("");
 
-/* timeline */
-document.getElementById("timeline").innerHTML=MS.map(x=>`<li style="--node:${wsOf(x.ws).color}"><span class="when">${x.when}</span><h3>${x.title}</h3><p>${x.text}</p><span class="ws"><i style="background:${wsOf(x.ws).color}"></i>${wsOf(x.ws).name}</span></li>`).join("")+
- `<li><span class="when">Every quarter</span><h3>A new release of SANE</h3><p>Based on what researchers in current projects need.</p><span class="ws"><i style="background:${wsOf("data").color}"></i>Data Facility</span></li>`;
+const paras=(arr,cls)=>arr.map(x=>`<p class="${cls}">${T(x)}</p>`).join("");
+
+/* chair */
+document.getElementById("chairBox").innerHTML=`<figure class="portrait"><img src="${CHAIR.img}" alt="Portrait of ${CHAIR.name}"><figcaption><b>${CHAIR.name}</b><span>${CHAIR.role}</span></figcaption></figure><div><p class="quote">${T(CHAIR.quote)}</p><div class="letter">${paras(CHAIR.text,"p")}</div><p class="sign"><b>${CHAIR.name}</b>${CHAIR.role}, ODISSEI</p></div>`;
 
 /* why */
-const paras=(arr,cls)=>arr.map(x=>`<p class="${cls}">${T(x)}</p>`).join("");
 document.getElementById("whyIntro").innerHTML=paras(WHY.intro,"sec-lede");
 const capsEl=document.getElementById("caps");capsEl.className="caps-wrap";
 capsEl.innerHTML=section(CAPS.map(c=>({key:true,ws:c[0],color:WS.find(w=>w.name===c[0]).color,t:c[1],s:c[2],full:c[3]})),"Read the full text");
@@ -910,13 +822,12 @@ document.getElementById("chapters").innerHTML=WS.map(w=>`
       <div>
         <div class="block"><h3 class="blk-h">About the ${w.name}</h3>${readMore(w.intro,"Read the full introduction")}</div>
         <div class="block"><h3 class="blk-h">Current status</h3><div class="kpi num"><strong>${w.status.big}</strong><span>${w.status.cap}</span></div>${readMore(w.status.text,"Read the full status")}</div>
-        <div class="block"><h3 class="blk-h">Challenges and future needs</h3>${section(w.hard,`Read all ${w.hard.length} challenges`)}</div>
         <div class="block"><h3 class="blk-h">Future plans 2027</h3>${section(w.plans,`Read all ${w.plans.length} plans for 2027`)}</div>
       </div>
       <aside class="budget">
         <h3>Itemised budget 2027</h3>
         <p class="tot num">${eur(w.total)}</p>
-        <p class="share">${pct(w.total)} of ODISSEI's 2027 expenditure</p>${w.sum!==w.total?`<p class="share" style="color:#ffd98a">The line items add up to ${eur(w.sum)}; the plan states ${eur(w.total)}. To be checked.</p>`:""}
+        <p class="share">${pct(w.total)} of ODISSEI's 2027 expenditure</p>
         <ul>${w.items.map(i=>`<li><div class="row num"><span>${i[0]}</span><b>${eur(i[1])}</b></div>${i[2]?`<small>${i[2]}</small>`:""}<span class="pxrow" aria-hidden="true">${Array.from({length:Math.max(1,Math.round(i[1]/50000))},(_,k)=>`<i style="--i:${k};background:${w.color}"></i>`).join("")}</span></li>`).join("")}</ul>
         <div class="bnote">${moreBlock(w.budgetText,"Read the budget note")}</div>
       </aside>
@@ -942,11 +853,12 @@ document.querySelectorAll("#chapters [role=tablist]").forEach(tl=>{
 document.getElementById("finText").innerHTML=paras(FINANCE,"sec-lede");
 /* Tables 1 and 2 */
 (function(){
-  const k=v=>typeof v==="number"?(v<0?`<span class="neg">−${Math.abs(Math.round(v)).toLocaleString("en-GB")}</span>`:Math.round(v).toLocaleString("en-GB")):v;
+  const k=v=>typeof v==="number"?(v<0?`<span class="neg">−${Math.abs(Math.round(v)).toLocaleString("en-GB")}</span>`:Math.round(v).toLocaleString("en-GB")):T(String(v));
   const Y=FIN_TABLE.years,c27=i=>Y[i]==="2027"?" y27":"";
   /* Table 1 as expandable workstreams: subtotals per year, tasks and their funding inside */
   const ft=document.getElementById("finTable");
-  const groups=[...WS.map(w=>({id:w.id,name:w.name,color:w.color})),{id:"",name:"CLARIAH",color:"#7f97a1",note:"Tasks led by CLARIAH"}];
+  const groups=[...WS.map(w=>({id:w.id,name:w.name,color:w.color}))];
+  const total=Y.map((_,i)=>FIN_TABLE.rows.reduce((a,r)=>a+r[8+i],0)); /* totals are the sum of the task rows */
   const cell=(v,i,tag="span")=>`<${tag} class="y${c27(i)}">${k(v)}</${tag}>`;
   const yrsLine=vals=>`<span class="fx-yrs">${Y.map((y,i)=>y==="2027"?"":`${y}: ${k(vals[i])}`).filter(Boolean).join(" · ")}</span>`;
   const fund=r=>{const f=[["SSHOC-NL",r[2]],["Macroscope",r[3]],["Other projects",r[4]],["2025 core",r[5]],["2026 core",r[6]],["2027 core",r[7]]].filter(x=>x[1]);
@@ -954,8 +866,8 @@ document.getElementById("finText").innerHTML=paras(FINANCE,"sec-lede");
   ft.innerHTML=`<div class="fx-row fx-head" aria-hidden="true"><span>Workstream and task</span>${Y.map((y,i)=>`<span class="y${c27(i)}">${y}</span>`).join("")}<span></span></div>`+
    groups.map((g,gi)=>{const rows=FIN_TABLE.rows.filter(r=>r[1]===g.id);const sums=Y.map((_,i)=>rows.reduce((a,r)=>a+r[8+i],0));
     return `<div class="fx-g" data-open="false"><button type="button" class="fx-row" aria-expanded="false" aria-controls="fx${gi}"><span class="nm"><i style="background:${g.color}"></i>${g.name} <small>${rows.length} task${rows.length>1?"s":""}</small></span>${sums.map((v,i)=>cell(v,i)).join("")}<span class="chev" aria-hidden="true"></span>${yrsLine(sums)}</button>
-     <div class="fx-tasks" id="fx${gi}">${rows.map(r=>`<div class="fx-row fx-t"><span class="tn">${g.id?r[0]:g.note}</span>${r.slice(8).map((v,i)=>cell(v,i)).join("")}<span></span>${yrsLine(r.slice(8))}${fund(r)}</div>`).join("")}</div></div>`}).join("")+
-   `<div class="fx-row fx-total"><span class="nm">Total</span>${FIN_TABLE.total.map((v,i)=>cell(v,i)).join("")}<span></span>${yrsLine(FIN_TABLE.total)}</div>`;
+     <div class="fx-tasks" id="fx${gi}">${rows.map(r=>`<div class="fx-row fx-t"><span class="tn">${r[0]}</span>${r.slice(8).map((v,i)=>cell(v,i)).join("")}<span></span>${yrsLine(r.slice(8))}${fund(r)}</div>`).join("")}</div></div>`}).join("")+
+   `<div class="fx-row fx-total"><span class="nm">Total</span>${total.map((v,i)=>cell(v,i)).join("")}<span></span>${yrsLine(total)}</div>`;
   const setG=(g,o)=>{g.dataset.open=o;g.querySelector("button").setAttribute("aria-expanded",o)};
   ft.querySelectorAll(".fx-g>button").forEach(b=>b.addEventListener("click",()=>{const g=b.parentElement;setG(g,g.dataset.open!=="true")}));
   const all=document.querySelector(".fx-all");
@@ -964,7 +876,7 @@ document.getElementById("finText").innerHTML=paras(FINANCE,"sec-lede");
 })();
 const fr=document.getElementById("finRows"),maxW=Math.max(...WS.map(w=>w.total));
 fr.innerHTML=WS.map((w,i)=>`<div class="fin-row" data-open="false"><button type="button" aria-expanded="false"><span class="nm"><i class="sq" style="background:${w.color}"></i>${w.name}</span><i class="bar gbar" style="width:${w.total/maxW*100}%;background:${w.color}"></i><span class="v num">${eur(w.total)}<small>${pct(w.total)}</small></span><i class="chev" aria-hidden="true"></i></button><div class="items">${w.items.map(it=>`<div class="num"><span>${it[0]}</span><b>${eur(it[1])}</b></div>`).join("")}</div></div>`).join("")+
- `<div class="fin-row"><button type="button" disabled style="cursor:default"><span class="nm">Total</span><span></span><span class="v num">${eur(TOTAL)}<small>To confirm against Table 1</small></span><span></span></button></div>`;
+ `<div class="fin-row"><button type="button" disabled style="cursor:default"><span class="nm">Total</span><span></span><span class="v num">${eur(TOTAL)}</span><span></span></button></div>`;
 fr.querySelectorAll(".fin-row>button:not([disabled])").forEach(b=>b.addEventListener("click",()=>{const r=b.parentElement,o=r.dataset.open!=="true";r.dataset.open=o;b.setAttribute("aria-expanded",o)}));
 
 /* kpis */
@@ -975,11 +887,6 @@ kg.innerHTML=KPI.map((k,i)=>`<details class="kt"><summary><span class="n">${i+1}
 /* print: open every toggle */
 addEventListener("beforeprint",()=>document.querySelectorAll("details.kt").forEach(d=>{d.dataset.was=d.open;d.open=true}));
 addEventListener("afterprint",()=>document.querySelectorAll("details.kt").forEach(d=>{d.open=d.dataset.was==="true"}));
-
-/* risks */
-document.getElementById("riskIntro").innerHTML=paras(RISKS.intro,"sec-lede");
-const rid="rm"+(++rmId);
-document.getElementById("riskCards").outerHTML=`<div class="risks">${RISKS.items.map(r=>`<article class="card risk"><h3>${r.t}</h3><p>${r.s}</p><p class="mit"><b>Mitigation.</b> ${r.mit}</p></article>`).join("")}</div><div class="full-list rm-more card" id="${rid}" hidden>${RISKS.items.map(r=>`<div class="fl-item"><h4>${r.t}</h4><p>${r.full}</p></div>`).join("")}</div><button type="button" class="rm-btn" aria-expanded="false" aria-controls="${rid}" data-label="Read the full risk descriptions">Read the full risk descriptions</button>`;
 
 /* governance */
 document.getElementById("govText").innerHTML=paras(GOV_TEXT,"sec-lede");
@@ -1058,12 +965,6 @@ document.querySelectorAll("canvas.sig").forEach((c,i)=>{const id=c.dataset.ws,op
 (function(){const wf=document.getElementById("waffle");if(!wf)return;let k=0;
   wf.innerHTML=WS.map(w=>w.items.map(i=>Array.from({length:Math.round(i[1]/50000)},()=>`<i style="--i:${k++};background:${w.color}" title="${w.name}: ${i[0]}"></i>`).join("")).join("")).join("");
   if(reduce)return;new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){wf.classList.add("on");o.disconnect()}},{threshold:.3}).observe(wf);})();
-
-/* voices */
-(function(){const el=document.getElementById("voiceList");if(!el||typeof STORIES==="undefined")return;
-  el.innerHTML=STORIES.map((v,i)=>`<article class="voice"><div class="head-wrap"><div class="tile"></div>${v.img?`<img src="${v.img}" alt="Portrait of ${v.name}">`:`<div class="ph">Portrait from Early Career Day</div>`}</div>
-    <span class="uses">${T(v.uses)}</span><blockquote>“${T(v.quote)}”</blockquote><p class="who"><b>${T(v.name)}</b><span>${T(v.role)}</span></p></article>`).join("");
-})();
 
 /* nav highlight, counters, bar growth */
 const links=[...document.querySelectorAll("#links a")];

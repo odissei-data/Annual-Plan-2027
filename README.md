@@ -7,7 +7,7 @@ The web edition of the ODISSEI Annual Plan 2027, a companion to the [Annual Repo
 | File | What it is |
 | --- | --- |
 | `index.html` | The page: layout, styles and interactions. You rarely need to touch it. |
-| `content.js` | All text and figures: workstreams, plans, challenges, budgets, milestones, KPIs, governance. Edit this file to change content. |
+| `content.js` | All text and figures: workstreams, plans, budgets, KPIs, governance. Edit this file to change content. |
 | `img/` | Photos and logos. Conference photos: ODISSEI Conference 2025, nelinadasha.com. The other photos are placeholders from the Annual Report 2025; their credits are still to be confirmed. |
 | `ODISSEI-Annual-Plan-2027.pdf` | The PDF edition, generated from the page. |
 | `make-pdf.sh` | Builds the PDF from the page. |
@@ -18,10 +18,8 @@ The web edition of the ODISSEI Annual Plan 2027, a companion to the [Annual Repo
 Open `content.js` and change the text between the quotes. Keep the commas and brackets as they are.
 
 - **Values still to be set**: write them in square brackets, for example `"[30%] faster"`. The page highlights them in yellow until you replace them with a real value.
-- **Budgets**: each workstream lists its line items under `items`. The stated totals are in `STATED`. If the line items do not add up to the stated total, the page shows a warning in that workstream's budget card.
-- **Milestones**: in `MS`, `m` is the month (0 = January, 11 = December). Decimals place a milestone within the month.
+- **Budgets**: each workstream lists its line items under `items`. The stated totals are in `STATED`. Small rounding differences between the line items and the stated total are expected and are not flagged.
 - **Photos**: put a new image in `img/` and change the `img` path and `credit` of that workstream.
-- **Voices**: add each story under `STORIES` (name, role, service used, quote, portrait). Portraits are cut-out PNGs with a transparent background, for example `img/voice-1.png`.
 
 ## Preview locally
 
@@ -51,9 +49,6 @@ Push to the `main` branch of `odissei-data/Annual-Plan-2027` and enable GitHub P
 
 ## Still to add
 
-- Message from the Chair (450 to 500 words) and a portrait
-- The risk table and a link to the full risk register
+- Message from the Chair: final text (the current text in `CHAIR` in `content.js` is a holding version) and a higher-resolution portrait
 - KPI values and targets (marked in square brackets)
 - Final photos with credits (stock placeholders are marked "[credit to be confirmed]")
-- Voices from the community: portraits and quotes from the Early Career Day
-- Budget check: the Laboratory and Hub line items each add up to €1 more than the stated totals (€1,565,605 vs €1,565,604; €2,542,506 vs €2,542,505)

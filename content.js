@@ -2,7 +2,7 @@
    Edit this file to change content; annual-plan-2027.html only handles layout.
    Text comes from the Google Doc "Content - Annual plan 2027".
    - Values in [square brackets] are shown as "still to be set" until replaced.
-   - In plans and challenges: t = heading, s = short summary for the card,
+   - In plans: t = heading, s = short summary for the card,
      full = the complete text from the plan. Items marked key:true are shown
      as cards (three per tab); every item appears in the full list under the
      section's "Read all" button.
@@ -34,13 +34,6 @@ const WS=[
    {t:"Knowledge Graph development",s:"A roadmap, first prototypes, and a pilot that makes studies reproducible in a few steps.",full:`It will result in a roadmap and first prototypes. A pilot will connect the Knowledge Graph to the DAB and SANE, with records of data references, code, software, and access conditions for a study, so it can be reproduced in a secure environment in a few steps.`},
    {t:"Consolidation in FAIR Expertise Hub",s:"Onboarding more data providers to the secure workflow, publishing vocabularies, workshops and blogs.",full:`FAIR steward will help onboard more data providers to the secure data workflow of Portal, DAB and SANE, publish vocabularies that make data more FAIR, and continue its dissemination work through workshops and blogs.`},
    {t:"European opportunities",s:"Two pending European proposals for SANE could add capacity and new users.",full:`The outcomes of two European proposals for SANE, TRELISS and FIERSE, are still pending; if funded, they would add development capacity and new users.`}],
-  hard:[
-   {key:true,t:"Demand growth and support limits",s:"More projects and requests put pressure on small teams.",full:`Raising awareness about ODISSEI facilities among researchers and data stewards remains a priority, but more projects, providers, and international requests will put pressure on the small teams at SURF and in the ODISSEI Coordination Team. More self-service, documentation and training are needed.`},
-   {key:true,t:"The Portal is not yet complete",s:"Eight scientific members still have no data listed.",full:`Eight scientific members still have no data listed, and the software behind the Portal may develop in directions that do not suit ODISSEI.`},
-   {t:"Every data provider is different",s:"Each has its own rules, so onboarding takes time.",full:`Each has its own rules and procedures, so adding a new provider takes time, and legal agreements become more complex when several providers share one workspace.`},
-   {key:true,t:"International users need a new route",s:"EOSC-ENTRUST, their current route, ends in 2026.",full:`The European project that gave them access (EOSC-ENTRUST) ends in 2026.`},
-   {t:"Sensitive data need a long-term home",s:"Archives do not yet accept them for long-term storage.",full:`Existing archives do not yet accept sensitive data for long-term storage.`},
-   {t:"Dependence on partners",s:"Some improvements wait on changes at SURF and CBS.",full:`Some improvements, such as easier-to-use software on the OSSC and opening the OSSC to other providers, depend on technical changes at SURF. CBS’s plan to issue its own persistent identifiers for datasets was delayed by limited internal capacity.`}],
   items:[["CBS microdata support",478696],["Portal coverage and interoperability",1083488],["Secure computing on the OSSC",523337],["SANE, incl. FIRMBACKBONE",966661]],
   budgetText:`Planned 2027 expenditure is €3,052,182. This includes €478,696 allocated to CBS for continuous support in using the CBS microdata, while efforts to ensure interoperability and expand Portal coverage are budgeted at a total of €1,083,488. A total of €523,337 is allocated to secure computing via OSSC. In addition, €966,661 will be directed to improvements in SANE, both in terms of technical development and making Firmbackbone infrastructure accessible in this environment.`},
 
@@ -68,13 +61,6 @@ const WS=[
    {key:true,t:"Fast, flexible recruitment with PANL",s:"A public beta for the ODISSEI community, with dedicated PANL calls.",full:`PANL opens its public beta version to the wider ODISSEI community, and ODISSEI will run dedicated PANL calls to support usage. New features include booking and scheduling for offline studies and an environment for longer-term work with groups of annotators.`},
    {key:true,t:"Linking people to the media they consume",s:"The first wave of the Web & Media Diets Observatory, on at least two platforms.",full:`The first wave of the Web & Media Diets Observatory will go live, covering at least two platforms. A new tool will let researchers retrieve archived web pages from the KB web collection by URL, and a proof-of-concept pipeline will ingest the news websites that respondents actually visited.`},
    {t:"Frameworks for media usage research",s:"A metadata model, a position paper and pilot research projects.",full:`A refined metadata model, a position paper on the Netherlands Media Corpus and a plan for audiovisual collections will be delivered. Pilot research projects will test two routes: from individuals to the content they saw, and from content in one archive to related content in others.`}],
-  hard:[
-   {key:true,t:"Success brings strain",s:"High demand for panel time increases respondent burden.",full:`High demand for LISS panel time, plus new modules such as media-diet collection, increases respondent burden. Panel capacity and response rates need careful management.`},
-   {t:"Hard-to-reach groups",s:"Keeping samples representative remains difficult.",full:`Keeping samples representative remains difficult for younger adults, migrants and single-person households, in both LISS and the international surveys.`},
-   {key:true,t:"Funding uncertainty",s:"Funding for international surveys beyond 2030 is not yet secured.",full:`Long-term funding for Dutch participation in ESS, SHARE, EVS and GGP beyond 2030 is not yet secured.`},
-   {t:"Fieldwork transition",s:"Self-administered surveys must not break long time series.",full:`The shift from face-to-face to self-administered surveys must not break long time series.`},
-   {t:"Legal and technical hurdles",s:"Media data have many owners, and EU rules are changing.",full:`Media data come from many owners with different licences and formats, and changing EU rules on platforms and privacy affect data donation and sensitive data.`},
-   {key:true,t:"PANL must prove itself",s:"It needs researchers and participants at scale after a slow restart.",full:`After a slower-than-planned restart, PANL needs to attract researchers and participants at scale.`}],
   items:[["Data collections: international surveys",773953],["Online panels: LISS and PANL",1782760,"incl. €216,410 PANL and €384,750 LISS interfaces"],["Netherlands Media Corpus",518913]],
   budgetText:`The planned 2027 expenditure for the Observatory is €3,075,626. Part of this total budget will be directed to data collections, to support international surveys and innovations, totalling €773,953. The investment in maintenance and improvements of Online Panels amounts to €1,782,760, including €216,410 for the launch and maintenance of PANL, and €384,750 for improving LISS user interfaces. The planned expenditure on the Netherlands Media Corpus is €518,913 for Web and Media diets collection and the first NMC pilots.`},
 
@@ -102,13 +88,6 @@ const WS=[
    {t:"Ready-made building blocks",s:"A first library of reusable experiment components.",full:`A first library of reusable experiment components will be released, and the team will explore AI assistants that help researchers build experiments.`},
    {key:true,t:"Safer network research",s:"Better protection for network data, a map-based explorer and faster community detection.",full:`PLANET-NL will develop methods that protect network data as well as ordinary tables, a visual tool for exploring networks on a map, and faster ways to find communities within very large networks.`},
    {t:"From research to policy",s:"The City Network Science Lab grows into a broader policy lab.",full:`The City Network Science Lab will grow into a broader policy lab, and community events will bring together researchers, policymakers and statistics offices.`}],
-  hard:[
-   {key:true,t:"The data donation software needs renewal",s:"After five years, it needs a major upgrade.",full:`After five years, it must be upgraded to handle larger files, new file types and new research needs.`},
-   {key:true,t:"Changing European rules",s:"Proposed GDPR changes could limit data donation.",full:`The proposed changes to the GDPR could limit data donation, and new routes to platform data under the Digital Services Act may change how much researchers need donation.`},
-   {t:"Experiments require technical skills",s:"Many researchers cannot build large interactive studies alone.",full:`Many researchers do not have the programming skills to build large interactive experiments, so they need support and ready-made building blocks.`},
-   {t:"Dependence on other launches",s:"A first PANL experiment waits for PANL to open.",full:`A first experiment on PANL can only start once PANL opens to the wider research community.`},
-   {t:"Network data are very sensitive",s:"Privacy protection for network data is less developed.",full:`Privacy protection for network data is less developed than for other data types, and all tools must run in secure environments.`},
-   {key:true,t:"Finding skilled staff",s:"Developers and research engineers are hard to recruit.",full:`Recruiting developers and research engineers is difficult and partly depends on co-funding, which may mean reducing the scope of some work.`}],
   items:[["Data donation (D3I)",768697],["Mass online experiments",176146],["Large network tools (PLANET-NL)",620762]],
   budgetText:`Planned 2027 expenditure is €1,565,604. Of this total budget, €768,697 will be allocated to upgrading the Data Donation facilities, ensuring the delivery of the D3I platform as a full service. Investments in mass online experiments will amount to €176,146, ensuring that the online experiments platform will be operational and ready for use. Finally, a budget of €620,762 will be allocated to securely leverage large network tools.`},
 
@@ -136,28 +115,28 @@ const WS=[
    {t:"Learning by doing",s:"The Summer School, AI workshops, and a new skills curriculum pilot.",full:`The ODISSEI Summer School will continue, along with workshops on topics such as AI in social science research and a second Research Infrastructure Day. The SoDa team will pilot two modules of a new skills curriculum.`},
    {t:"Stronger user voice",s:"The Early Career Board continues; Research Infrastructure Day becomes annual.",full:`The Early Career Board will continue advocating for early career researchers in the community. The Research Infrastructure Day will become a standalone annual event that brings together infrastructure providers and educators.`},
    {t:"Smooth coordination and outreach",s:"Support for governance, reporting to NWO, and all task plans on time.",full:`The Hub will continue to support the governance bodies, reporting to NWO and compliance across partners, with all task plans delivered on time. Communication and outreach activities will remain a core instrument in reaching the community.`}],
-  hard:[
-   {key:true,t:"More questions, limited capacity",s:"Support requests grow while the team stays small.",full:`As more researchers use SANE, the grants and the Portal, support requests increase, while the team remains small.`},
-   {key:true,t:"Little insight into use so far",s:"Support has not been measured systematically.",full:`Support has not been measured systematically, so it has been hard to see which members use which services.`},
-   {t:"The ethics help desk is underused",s:"No one has requested a consultation yet.",full:`Its online self-assessment tool is visited, but no one has requested a consultation yet.`},
-   {key:true,t:"Missing guidance",s:"No written policies yet on some recurring questions.",full:`There are no written policies yet on some recurring questions, such as requests for data from people outside academia, for example, journalists, or the use of AI language models with sensitive data. A data protection impact assessment promised at the start of Macroscope still has to be carried out.`},
-   {t:"Training needs more hours",s:"Staff time does not match the training work needed.",full:`Staff time for the SSHOC-NL training work does not match the work needed, and interest in the new curriculum still has to be tested.`},
-   {t:"Keeping a large partnership on track",s:"77% of first task plans arrived on time in 2026.",full:`In 2026, 77% of first task plan versions arrived on time, and reaching a quorum at Project Board meetings was difficult because decisions require unanimity.`}],
   items:[["Coordination and shared reporting",848569],["Education and training",469769],["Support: front desk, SoDa, ethics",1224168]],
   budgetText:`Planned 2027 expenditure is €2,542,505. Of these resources, €848,569 will support cross-infrastructure Coordination and shared reporting activities. €469,769 is directed towards educational activities, such as development and delivery of the training programmes or ODISSEI Summer School. Finally, €1,224,168 will finance a wide array of support activities, ranging from front desk support and SoDa team methodological support to ethical support.`}
 ];
 
-/* Budget totals as stated in the plan (line items are checked against these) */
+/* Budget totals as stated in the plan (line items may differ by rounding) */
 const STATED={data:3052182,observatory:3075626,laboratory:1565604,hub:2542505};
 
-/* Dated milestones (m = month index, 0 = January) */
-const MS=[
- {m:0,label:"Support measured",ws:"hub",when:"January",title:"Every support request and use of a facility is recorded",text:"So ODISSEI can see which members use which facilities, and how quickly researchers get an answer."},
- {m:1,label:"Experiments workspace opens",ws:"laboratory",when:"Early 2027",title:"The online experiments workspace opens to all researchers",text:"With a support plan. The first large experiment then runs with LISS households.",row2:true},
- {m:3.2,label:"FIRMBACKBONE route",ws:"data",when:"Spring",title:"FIRMBACKBONE goes from approved request to secure workspace without manual steps",text:"The first dataset on the new secure route. The KB web archive follows."},
- {m:3.8,label:"International access to SANE",ws:"data",when:"Spring",title:"ODISSEI and SURF agree how international researchers can use SANE",text:"Replacing the EOSC-ENTRUST route, which ends in 2026.",row2:true},
- {m:5.3,label:"SANE credit model review",ws:"data",when:"June",title:"The SANE credit model is evaluated",text:"The boards receive a recommendation on how secure computing is paid for."}
-];
+/* ---------- Message from the Chair ---------- */
+const CHAIR={
+ name:"Daniel Oberski",
+ role:"Scientific Director & Chair of the Management Board",
+ img:"img/oberski.jpg",
+ quote:`Researchers should be able to concentrate on their scientific questions, with confidence that sensitive data are handled responsibly.`,
+ text:[
+  `[HOLDING] The plans for 2027 are very exciting and particularly the prospect of bringing different ways of studying society into the same research workflow. Surveys, digital traces, experiments, historical collections and population networks each reveal something different. Connecting them gives us opportunities to ask questions that none of these sources could answer alone.`,
+  `The developments around LISS are a compelling example. Integrating data donation, interactive experiments and mobile measurements with a probability-based panel opens up new possibilities for understanding everyday behaviour. Connecting participants’ media use to the content they encounter could help us investigate how information, attitudes and social circumstances interact. This is where collaboration between the social sciences and humanities becomes scientifically productive.`,
+  `Of course, more data do not automatically produce better knowledge. We still need to establish what our measures capture, whose experiences are represented, and where uncertainty enters our conclusions. I see an important role for our infrastructure in making that methodological work possible, alongside providing access to new sources and computational tools.`,
+  `In 2027, we will also work to make those possibilities more accessible. Further development of SANE and the Data Access Broker will help connect discovery, permission and secure analysis. Researchers should be able to concentrate on their scientific questions, with confidence that sensitive data are handled responsibly.`,
+  `Equally encouraging is the investment in people such as research software engineers, methodological support, fellowships and training. Infrastructure becomes useful through the expertise of colleagues who help researchers design studies, solve problems and develop approaches that others can reuse.`,
+  `Our ambition is substantial, and delivery will require careful choices and sustained collaboration. I look forward to seeing these connections take shape in research projects, and to working with our partners to build an infrastructure whose value is demonstrated in the quality of the research it enables across our disciplines.`
+ ]
+};
 
 /* ---------- Why ODISSEI matters ---------- */
 const WHY={
@@ -177,14 +156,14 @@ const CAPS=[
 ];
 
 /* ODISSEI in numbers */
-const NUMS=[[2250000,"Minutes of LISS panel time, free for researchers"],[52000,"Interviews conducted by ODISSEI surveys"],[9946,"Datasets in the ODISSEI Portal"],[5846,"Portal searches in the last 12 months"],[1890,"Publications"],[1500,"Attendees at events"],[623,"CBS microdata projects financed"],[108,"Summer School alumni"],[45,"Member organisations"],[16,"Projects on the Secure Supercomputer"]];
+const NUMS=[[2570000,"Minutes of LISS panel time, free for researchers"],[64000,"Interviews conducted by ODISSEI surveys"],[10586,"Datasets in the ODISSEI Portal"],[5846,"Portal searches in the last 12 months"],[1953,"Publications"],[2200,"Attendees at events"],[651,"CBS microdata projects financed"],[129,"Summer School alumni"],[45,"Member organisations"],[17,"Projects on the Secure Supercomputer"]];
 
 /* ---------- Financial plan ---------- */
 const FINANCE=[
  `Table 1 shows ODISSEI’s planned expenditure for 2027. Because ODISSEI is one infrastructure rather than a collection of separate projects, the table is organised around ODISSEI’s core tasks, which also structure the programme of work in this plan. For each task, the table shows the planned expenditure and the project or source that finances it.`,
  `All of the funding projects have been awarded and are currently under way. Membership fees are also used as co-financing for grant applications, which increases the funding available to the community.`,
  `The ODISSEI Coordination Team works closely with service providers to keep projects coordinated, avoid duplication and achieve efficiencies in implementation. The ODISSEI Management Board reviews the tasks in each project annually and adjusts their budgets to improve development and deliverables for the ODISSEI community.`,
- `Most tasks in SSHOC-NL and Macroscope are carried out jointly with CLARIAH, but a few concentrate on key investments in one community. The tasks marked “CLARIAH” are led by CLARIAH, and ODISSEI’s involvement in them is limited: tasks 2.3 and 3.2 in SSHOC-NL, and task 3.1 in Macroscope.`
+ `Most tasks in SSHOC-NL and Macroscope are carried out jointly with CLARIAH, but a few concentrate on key investments in one community. The tasks led by CLARIAH, in which ODISSEI’s involvement is limited, are not included in Table 1: tasks 2.3 and 3.2 in SSHOC-NL, and task 3.1 in Macroscope.`
 ];
 
 /* ---------- KPIs: [question, indicator, now, 2027 target, full text] ---------- */
@@ -204,45 +183,33 @@ const FIN_TABLE={
   ["Data Donation","laboratory","1.2","3.3","D3I","","","UvA (benchfees), Macroscope (UU)",185,780,768.697,686],
   ["Mass Online Experiments","laboratory","3.3","","","","Centerdata (oTree)","",110,173,176.146,99],
   ["Large Network Tools (POPNET)","laboratory","3.2","3.2 (only UL)","Popnet","","","UvA (benchfees)",88,583,620.762,607],
-  ["Coordination","hub","5.3","4.1","SBD, EUR PDI-SSH","EUR","EUR, VU","",566,1505,848.569,1046],
+  ["Coordination","hub","5.3","4.1","SBD, EUR PDI-SSH","EUR","EUR, VU","",566,1150,848.569,1046],
   ["Education","hub","5.2","4.3","","","EUR","",51,484,469.769,573],
-  ["Support","hub","5.1","4.2","FIP, MUW, FAIR, AI4Social, CDIF","UU","EUR, UU, TUD","UU-FSW",843,1305,1224.168,1528],
-  ["CLARIAH","","2.3; 3.1","3.1","","","","",529,958,768,1153]],
- total:[4885,15855,11004,11262]
+  ["Support","hub","5.1","4.2","FIP, MUW, FAIR, AI4Social, CDIF","UU","EUR, UU, TUD","UU-FSW",843,1305,1224.168,1528]]
 };
 /* Table 2: revenues and structural funding, in thousands of euros, for the same four years */
 const REV_TABLE=[
- ["Unearmarked revenues",[1640,145,158.75,155]],
- ["Unearmarked and allocated revenues",[1353,776,468,468]],
- ["Remaining unallocated revenues",[287,-631,-310,-313]],
- ["Cumulative unallocated revenues",[287,-344,-654,-968]],
+ ["Core Budget Revenue",[1640,2153,834,829]],
+ ["Core Budget Expenditure (included in Table 1)",[1353,2101,776,468]],
+ ["Annual Balance",[287,52,58,361]],
+ ["Cumulative Balance",[287,339,397,758]],
  null,
- ["Structural funding",[1938,2791,2291,2291]],
- ["Ongoing funding",[4586,13209,8871,9126]],
- ["Structural funding as %",["29.71%","17.44%","20.52%","20.07%"]]
+ ["Structural funding",[1054,2791,2292,2287]],
+ ["Ongoing funding",[3302,11752,7944,7821]],
+ ["Structural funding as %",["24.20%","19.19%","22.39%","22.63%"]]
 ];
 
 const KPI_INTRO=`ODISSEI’s scope has changed over the past year. The award of Macroscope and Deepfield, together with ODISSEI’s growing role in EU proposals, means the infrastructure now covers a larger and more varied portfolio than our current KPI table was designed for. Rather than adding rows to that table, we propose to monitor ODISSEI through eight questions, each answered by one indicator with its current status and a 2027 target.`;
 const KPI=[
- ["Are members getting value?","Grant funding brought in per euro of membership fees","€[X] brings in €[Y]","At least [1:3]",`Membership fees are used as co-financing for grant applications, so each member’s contribution brings in more research funding than it could alone. Currently, €[X] in fees brings in €[Y] in grants, a ratio of [1:Y]. Our target is at least [1:3] by 2027.`],
- ["Is ODISSEI being used?","Active projects, and members with at least one","[X] projects; 38% of members","[+25%] projects; [50%] of members",`An active project is one funded through MAG calls, LISS calls or SoDa fellowships, running in SANE, or using PORT, with PANL in the future. Currently there are [X] active projects, and 38% of member organisations have at least one. Our target is [25]% more projects and at least [50]% of members active by 2027.`],
- ["Is data access getting easier?","Median days from approved request to a working SANE environment","Baseline from 2026 SANE records","[30%] faster",`We measure the median number of days in SANE from an approved request to a working environment. Currently there is no baseline; it will be set from SANE records in 2026. Our target is a [30]% reduction by 2027.`],
- ["Is the impact growing?","Publications, citations, and policy impact of supported projects","15 publications, 131 citations (Jan to Oct 2025)","[+20%] in each area",`We track the impact of the projects we support in science and policy, and we plan to add media impact in the future. Currently, supported projects have produced 15 publications and 131 citations (January to October 2025), and policy and media baselines will be set in 2027. Our target is [20]% growth in each area by 2027.`],
- ["Is ODISSEI sustainable?","Structural funding share and members committed beyond 2027","20.8% structural; 31 of 45 members","[30%]; [40] of 45",`Sustainability rests on structural funding, reserves within the 5% rule, and members committing beyond the current period. Currently, structural funding is 20.8% of the budget and 31 of 45 members have committed beyond 2027. Our target is at least [30]% structural funding and [40] of 45 members committed by 2027.`],
- ["Is there strategic alignment?","CBS, SURF and the SSH-Raad with a signed agreement or joint roadmap","[X] of 3","All 3",`CBS, SURF and the SSH-Raad shape our data, computing and policy environment, and their governance should support ODISSEI’s work. Currently, [X] of [3] have a signed agreement or joint roadmap. Our target is all [3] by 2027.`],
- ["Are users engaged?","Researchers returning within 24 months, and yearly participation","[X]% return; [Y] participants","[40%] return; [+15%]",`We measure engagement in two ways: the share of researchers who return to our services within 24 months, and annual participation in ODISSEI activities, such as the conference, summer school, workshops and SoDa consultations. Currently, [X]% of users return and [Y] people take part in these activities each year. Our target is at least [40]% retention and [15]% more participants by 2027.`],
- ["Is ODISSEI positioned internationally?","EU proposals joined each year and their success rate","[X] a year, [Y]% success","[3] a year, [25%]+",`EU projects such as CDIF4EOSC, AI4Social and IPDLN bring funding and influence in European research infrastructure. Currently, ODISSEI joins [X] proposals a year with a [Y]% success rate, securing €[Z]. Our target is at least [3] proposals a year, each linked to our mission and strategic goals, with a success rate of [25]% or higher.`]
+ ["Are members getting value?","Grant funding brought in per euro of membership fees","€670,000 brings in €7,944,000","At least €10 returned for every €1 invested",`Membership fees are used as co-financing for grant applications, so each member’s contribution brings in more research funding than it could alone. Currently, €670,000 in fees brings in €7,944,000 in grants, a ratio of 1:12. Our target is to maintain at least 1:10.`],
+ ["Is ODISSEI being used?","Active projects","125 projects","+25% projects",`Currently there are around 125 active projects. This comprises 67 projects running in SANE, 10 projects using the CBS microdata discount (which includes the active MAG awards), 9 projects running on the OSSC, 28 projects receiving the LISS panel discount (which includes the LISS call awards), 3 SoDa fellowships and 8 data donation studies using PORT. Our target is 25% growth (156 projects) in 2027.`],
+ ["Is data access getting easier?","Percentage gaining access to data within 10 working days from access request to a working SANE environment","33% for 2026","80% for 2027.",`We measure the percentage of proposals which receive access within 10 days of requesting data or by the date as set by the researcher. In 2026, this was achieved for 33% of proposals and our target is 80% for 2027.`],
+ ["Is the impact growing?","Publications, citations, and policy impact of supported projects","71 publications, 24 OpenOverheid mentions, 2,798 cumulative citations.","+20% in each area",`We track the impact of the projects we support in science and policy, and are tracking media impact fully as of 2027. Currently, supported projects have produced 71 publications in 2026 (January to October) and 24 separate documents have mentioned ODISSEI or related work in OpenOverheid. Cumulative citations to ODISSEI-related work now stand at 2,798. Our target is 20% growth in each area through 2027.`],
+ ["Is ODISSEI sustainable?","Structural funding share and members committed for the long term","22.4% structural; 31 of 45 members committed to 2031","20% structural; 45 of 45 members committed to 2035 by end of 2028",`Sustainability rests on structural funding, reserves within the 5% rule, and members committing for the long term. Currently, structural funding is 22.4% of the budget and 31 of 45 members have committed until 2031. Our target is at least 20% structural funding and 45 of 45 members committed through 2035 by the end of 2028 as part of the next LSRI application.`],
+ ["Is there strategic alignment?","CBS, SURF, DSW, DEB, and the SSH-Raad to be actively consulted on the strategic work programme annually","4 of 5 were consulted in 2026","All 5 (including SSH-Raad)",`CBS, SURF, DEB, DSW, and the SSH-Raad shape our data, computing and policy environment, and their governance should support ODISSEI’s work. In 2026 we formally reported to and consulted 4 of the 5 on a shared strategic roadmap. Our target is to repeat this with all 5 in 2027.`],
+ ["Are users engaged?","Yearly participation in ODISSEI activities","587 unique participants","+15% participation; 40% returning",`We measure engagement as the annual unique participation in ODISSEI activities, such as the conference, summer school, workshops and SoDa consultations. In 2026 this was 587 (not including IPDLN). As of 2027, we will also track the number of users who return to use a service or attend an event within two years of initial contact in order to better measure retention. Our target is at least 40% retention and 15% more participants by 2027.`],
+ ["Is ODISSEI positioned internationally?","International proposals joined each year and their success rate","3 proposals in 2026, 67% success","3 a year, 33%+ success rate",`International projects such as CDIF4EOSC, AI4Social, and TRELISS can bring influence in European research infrastructure. In 2026, ODISSEI joined 3 proposals with a 67% success rate, securing €419,000. TRELISS was unsuccessful. Our target is at least 3 proposals a year, each linked to our mission and strategic goals, with a success rate of 33% or higher.`]
 ];
-
-/* ---------- Risks ---------- */
-const RISKS={
- intro:[
-  `The ODISSEI Risk register is designed to support the strategic planning and decision making of the Coordination Team, the Management Board, and the Supervisory Board. Risk assessments are always subjective but consolidating the risk assessments into a singular document can help identify common risks, differences in risk perceptions across the project and interdependent mitigation strategies. The full risk register has been used to create an overview of the various challenges faced by ODISSEI.`,
-  `The high probability, high impact risks for this year were identified by Task Leaders, the Coordination Team and the Management Board and listed in Table [X]. All the risks have been explicitly discussed by the Management Board and are being actively monitored by task leaders and Coordination Team contacts.`],
- items:[
-  {t:"Delayed legal documents for the OSSC",s:"The signing of several updated legal documents is substantially delayed, and several OSSC projects had to be postponed.",mit:"Escalated at CBS and SURF, with both organisations' highest legal counsel involved. Expected to be resolved in the coming months.",full:`A core risk is in the OSSC, where the signing of several updated legal documents is substantially delayed. This resulted in having to postpone several OSSC projects. This issue was escalated at both CBS and SURF, now ensuring the involvement and availability of the organisations’ highest legal councils. It is expected that the issue will be resolved in the coming months.`},
-  {t:"Alignment across OSSC, Portal and SANE",s:"User processes across the ODISSEI ecosystem need to fit together, and the OSSC's user needs deserve a fresh look.",mit:"A joint SURF and ODISSEI working group develops a sustainability strategy and an OSSC user evaluation. SURF appoints a technical project manager across all ODISSEI projects.",full:`A second core risk is the alignment between the OSSC, Portal, SANE, and the wider ODISSEI ecosystem. Entering the last project phase, the increased need for alignment of the user processes has become clear. In addition, the importance and size of the OSSC justifies an end-of-project revaluation of its user needs. To mitigate these risks, a SURF-ODISSEI sustainability strategy and an OSSC User evaluation will be developed by a joint working group between SURF and the ODISSEI Coordination Team. To oversee these developments, a new technical project manager overseeing all ODISSEI projects will be appointed at SURF, complementing the SURF-ODISSEI Research Partnership Lead.`}]
-};
 
 /* ---------- Governance ---------- */
 const GOV_TEXT=[
@@ -255,13 +222,3 @@ const GOV={"Supervisory Board":[["Claes de Vreese","DSW, Chair"],["Viola Angelin
 "International Advisory Board":[["Julia Lane","New York University"],["Melinda Mills","University of Oxford"],["Sally Wyatt","Maastricht University"],["Amy O'Hara","Georgetown University"]]};
 /* One line per body, from the plan text */
 const GOV_NOTES={"Supervisory Board":"The Supervisory Board consists of seven members.","Management Board":"The Management Board consists of eleven members and meets monthly to discuss and evaluate the programme of work.","Coordination Team":"The Coordination Team runs ODISSEI day to day.","International Advisory Board":"An International Advisory Board has been established."};
-
-/* ---------- Voices from the community ----------
-   To be collected at the Early Career Day, 4 November 2026.
-   img: a cut-out portrait (PNG with transparent background), e.g. "img/voice-1.png".
-   Until then the [bracketed] placeholders are shown highlighted. Do not publish invented quotes. */
-const STORIES=[
- {name:`[Name]`,role:`[Role, organisation]`,uses:`[Service used, e.g. LISS panel]`,quote:`[Quote from the Early Career Day interview]`,img:``},
- {name:`[Name]`,role:`[Role, organisation]`,uses:`[Service used, e.g. SANE]`,quote:`[Quote from the Early Career Day interview]`,img:``},
- {name:`[Name]`,role:`[Role, organisation]`,uses:`[Service used, e.g. Summer School]`,quote:`[Quote from the Early Career Day interview]`,img:``}
-];
