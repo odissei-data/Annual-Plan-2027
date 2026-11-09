@@ -10,7 +10,7 @@
 
 /* ---------- Workstreams ---------- */
 const WS=[
- {id:"data",name:"Data Facility",color:"var(--ws-data)",img:"img/odissei-keynote.jpg",alt:"Keynote speaker on stage at the ODISSEI Conference",credit:"Photo: nelinadasha.com",
+ {id:"data",name:"Data Facility",color:"var(--ws-data)",img:"img/odissei-keynote.jpg",alt:"Keynote speaker on stage at the ODISSEI Conference",credit:"Photo: nelinadasha.com for ODISSEI",
   head:`From finding data to analysing it <span class="hl">safely, in one route</span>`,
   aim:"Find, request and analyse sensitive data in one route",
   lead:`Some of the most valuable social science data are also the most sensitive. The Data Facility makes it possible for researchers to find such data, request access, and analyse it in a protected setting where the data owner stays in control.`,
@@ -37,7 +37,7 @@ const WS=[
   items:[["CBS microdata support",478696],["Portal coverage and interoperability",1083488],["Secure computing on the OSSC",523337],["SANE, incl. FIRMBACKBONE",966661]],
   budgetText:`Planned 2027 expenditure is €3,052,182. This includes €478,696 allocated to CBS for continuous support in using the CBS microdata, while efforts to ensure interoperability and expand Portal coverage are budgeted at a total of €1,083,488. A total of €523,337 is allocated to secure computing via OSSC. In addition, €966,661 will be directed to improvements in SANE, both in terms of technical development and making Firmbackbone infrastructure accessible in this environment.`},
 
- {id:"observatory",name:"Observatory",color:"var(--ws-obs)",img:"img/observatory.jpg",alt:"A survey participant holds a tablet",credit:"Photo: [credit to be confirmed]",
+ {id:"observatory",name:"Observatory",color:"var(--ws-obs)",img:"img/observatory.jpg",alt:"A survey participant holds a tablet",credit:"Photo: ODISSEI",
   head:`Good research starts with <span class="hl">good data</span>`,
   aim:"Long-running collections and new kinds of data",
   lead:`The Observatory sustains the long-running data collections the community relies on and opens up kinds of data that did not exist a few years ago.`,
@@ -64,7 +64,7 @@ const WS=[
   items:[["Data collections: international surveys",773953],["Online panels: LISS and PANL",1782760,"incl. €216,410 PANL and €384,750 LISS interfaces"],["Netherlands Media Corpus",518913]],
   budgetText:`The planned 2027 expenditure for the Observatory is €3,075,626. Part of this total budget will be directed to data collections, to support international surveys and innovations, totalling €773,953. The investment in maintenance and improvements of Online Panels amounts to €1,782,760, including €216,410 for the launch and maintenance of PANL, and €384,750 for improving LISS user interfaces. The planned expenditure on the Netherlands Media Corpus is €518,913 for Web and Media diets collection and the first NMC pilots.`},
 
- {id:"laboratory",name:"Laboratory",color:"var(--ws-lab)",img:"img/odissei-network.jpg",alt:"Researchers talking during a break at the ODISSEI Conference",credit:"Photo: nelinadasha.com",
+ {id:"laboratory",name:"Laboratory",color:"var(--ws-lab)",img:"img/odissei-network.jpg",alt:"Researchers talking during a break at the ODISSEI Conference",credit:"Photo: nelinadasha.com for ODISSEI",
   head:`New tools for studying life in a <span class="hl">digital, connected</span> society`,
   aim:"Shared tools for digital traces, experiments and networks",
   lead:`The Laboratory develops shared tools that let researchers study digital traces and social networks responsibly, so research groups can build on common tools instead of creating their own.`,
@@ -91,7 +91,7 @@ const WS=[
   items:[["Data donation (D3I)",768697],["Mass online experiments",176146],["Large network tools (PLANET-NL)",620762]],
   budgetText:`Planned 2027 expenditure is €1,565,604. Of this total budget, €768,697 will be allocated to upgrading the Data Donation facilities, ensuring the delivery of the D3I platform as a full service. Investments in mass online experiments will amount to €176,146, ensuring that the online experiments platform will be operational and ready for use. Finally, a budget of €620,762 will be allocated to securely leverage large network tools.`},
 
- {id:"hub",name:"Hub",color:"var(--ws-hub)",img:"img/hub.jpg",alt:"Two researchers working together at a table",credit:"Photo: [credit to be confirmed]",
+ {id:"hub",name:"Hub",color:"var(--ws-hub)",img:"img/hub.jpg",alt:"Two researchers working together at a table",credit:"Photo: ODISSEI",
   head:`The people behind the <span class="hl">infrastructure</span>`,
   aim:"Support, training and coordination",
   lead:`Data and tools matter only when researchers know they exist, can get help using them, and trust they are used responsibly. The Hub is where researchers find that help.`,

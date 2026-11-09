@@ -88,7 +88,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 
 /* ---------- glance ---------- */
 .glance .head{display:grid;gap:0}
-.tot-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-top:48px}
+.tot-row{display:flex;flex-direction:column;align-items:flex-start;gap:6px;margin-top:48px}
 .tot-row strong{font-size:clamp(36px,4vw,56px);font-weight:500;color:#fff;letter-spacing:-.02em}
 .tot-row span{font-size:15px;color:var(--on-dark-muted)}
 .explorer{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px;margin-top:28px}
@@ -670,7 +670,7 @@ html.pdf .band h2{font-size:52px}
       <figure class="gd"><img src="img/odissei-posters.jpg" alt="Researchers at the poster session of the ODISSEI Conference" width="1400" height="934"></figure>
       <figure class="ge"><img src="img/data.jpg" alt="Cabling inside a server rack" width="900" height="1200"></figure>
     </div>
-    <p class="gal-cap">Conference photos: ODISSEI Conference 2025, nelinadasha.com. Other photos: [credit to be confirmed]</p>
+    <p class="gal-cap">All photos © ODISSEI. Conference photos taken for ODISSEI at the ODISSEI Conference 2025 by nelinadasha.com.</p>
     <div class="caps" id="caps"></div>
     <div class="why-projects">
       <p class="closing" id="whyClosing"></p>
@@ -743,7 +743,6 @@ html.pdf .band h2{font-size:52px}
     <div><button class="pill ghost print-btn" type="button">Save the plan as PDF</button></div>
     <div class="row">
       <img src="img/logo-white.png" alt="ODISSEI">
-      <p>ODISSEI Annual Plan 2027, prototype built from the draft of 3 November 2026. Figures are taken from the draft. Photographs are placeholders from the Annual Report 2025.</p>
     </div>
   </div>
 </footer>
@@ -891,9 +890,9 @@ addEventListener("afterprint",()=>document.querySelectorAll("details.kt").forEac
 /* governance */
 document.getElementById("govText").innerHTML=paras(GOV_TEXT,"sec-lede");
 const gt=document.getElementById("govTabs"),pp=document.getElementById("people"),gn=document.getElementById("govNote");
-gt.innerHTML=Object.keys(GOV).map((k,i)=>`<button role="tab" aria-selected="${i===1}" data-k="${k}">${k}</button>`).join("");
+gt.innerHTML=Object.keys(GOV).map((k,i)=>`<button role="tab" aria-selected="${i===0}" data-k="${k}">${k}</button>`).join("");
 function gov(k){pp.innerHTML=GOV[k].map(p=>`<div class="person fade"><b>${p[0]}</b><span>${p[1]}</span></div>`).join("");gn.textContent=GOV_NOTES[k]||""}
-gov("Management Board");
+gov("Supervisory Board");
 tabset(gt,b=>gov(b.dataset.k));
 document.getElementById("govPrint").innerHTML=Object.entries(GOV).map(([k,v])=>`<h3 style="margin:18px 0 8px">${k}</h3><p>${GOV_NOTES[k]} ${v.map(p=>`${p[0]} (${p[1]})`).join(", ")}.</p>`).join("");
 
