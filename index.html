@@ -115,6 +115,24 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .fade{animation:fade .45s var(--ease)}
 @keyframes fade{from{opacity:.2;transform:translateY(6px)}to{opacity:1;transform:none}}
 
+/* ---------- community ---------- */
+.comm{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,72px);align-items:start;margin-top:48px}
+.comm .photo{margin:0;position:sticky;top:96px;display:grid;gap:10px}
+.comm .photo .pic{position:relative}
+.comm .photo img{display:block;width:100%;height:auto;aspect-ratio:2/3;object-fit:cover;border-radius:var(--r-lg);background:var(--tint)}
+.comm .photo .credit{position:absolute;left:10px;bottom:8px;font-size:11.5px;color:#fff;background:rgba(13,45,58,.7);padding:2px 7px;border-radius:4px}
+.comm .photo figcaption{font-size:14px;line-height:1.4;color:var(--ink-muted)}
+.comm .quote{padding-left:20px;border-left:3px solid var(--cyan)}
+.comm .qa{list-style:none;margin:36px 0 0;padding:0;display:grid;gap:28px}
+.comm .qa li{display:grid;gap:10px;padding-top:24px;border-top:1px solid var(--line-soft)}
+.comm .qa h3{font-size:19px;line-height:1.35;color:var(--petrol);max-width:none}
+.comm .qa p{font-size:17px;line-height:1.65;max-width:68ch}
+.comm .who{display:grid;gap:2px;margin-top:14px;font-size:15px;font-weight:400;color:var(--ink-muted)}
+.comm .who b{font-size:16px;font-weight:500;color:var(--ink)}
+.comm .contact{margin-top:32px;font-size:16px;color:var(--ink-muted)}
+.comm a{color:var(--teal-text)}
+.comm .meet{display:inline-block;margin-top:14px;font-size:16px;font-weight:500}
+
 /* ---------- chair + why ---------- */
 .chair{display:grid;grid-template-columns:200px minmax(0,1fr);gap:clamp(24px,3vw,48px);align-items:start;padding:clamp(24px,3vw,36px);margin-top:32px;max-width:980px}
 .chair .portrait{margin:0;display:grid;gap:12px;align-content:start}
@@ -410,6 +428,8 @@ canvas{display:block;width:100%;height:100%}
       .plans,.caps,.projects,.keys{grid-template-columns:minmax(0,1fr)}
   .full-list{padding:4px 20px}
   .chair{grid-template-columns:minmax(0,1fr)}
+  .comm{grid-template-columns:minmax(0,1fr)}
+  .comm .photo{position:static;max-width:420px}
   .chair .portrait{grid-template-columns:96px minmax(0,1fr);align-items:center}
   .kpis{grid-template-columns:minmax(0,1fr)}
   .kt summary{padding:18px 20px;grid-template-columns:28px minmax(0,1fr) 20px;gap:12px}
@@ -469,7 +489,17 @@ html.pdf .band h2{font-size:52px}
   .foot{break-before:page;display:flex;align-items:flex-end}
   .foot .wrap{padding:16mm 15mm!important}
   /* page structure */
-  #glance,#chair,#why,#finance,#kpis,#governance{break-before:page}
+  #glance,#chair,#why,#community,#finance,#kpis,#governance{break-before:page}
+  .comm{grid-template-columns:55mm minmax(0,1fr);gap:9mm;margin-top:8mm}
+  .comm .photo{position:static}
+  .comm .qa{gap:4mm;margin-top:6mm}
+  .comm .qa li{padding-top:4mm;break-inside:avoid}
+  .comm .qa h3{font-size:11pt}
+  .comm .qa p{font-size:10pt;line-height:1.5}
+  .comm .quote{font-size:14pt}
+  .comm .contact{font-size:10pt;margin-top:6mm}
+  .comm .who{font-size:9.5pt;margin-top:3mm}
+  .comm .who b{font-size:10.5pt}
   /* chair: an opening page of its own */
   #chair .sec-title{font-size:30pt}
   .chair{display:grid!important;grid-template-columns:45mm minmax(0,1fr)!important;gap:9mm;align-items:start;margin-top:10mm;padding:0;border:0!important;max-width:none}
@@ -608,6 +638,7 @@ html.pdf .band h2{font-size:52px}
       <a href="#observatory">Observatory</a>
       <a href="#laboratory">Laboratory</a>
       <a href="#hub">Hub</a>
+      <a href="#community">Community</a>
       <a href="#finance">Finance</a>
       <a href="#kpis">KPIs</a>
       <a href="#governance">Governance</a>
@@ -685,6 +716,13 @@ html.pdf .band h2{font-size:52px}
 </section>
 
 <div id="chapters"></div>
+
+<section class="sec" id="community">
+  <div class="wrap">
+    <h2 class="sec-title">A word from our community</h2>
+    <div class="comm" id="commBox"></div>
+  </div>
+</section>
 
 <section class="sec dark" id="finance">
   <div class="wrap">
@@ -794,6 +832,13 @@ pick("data");
 document.getElementById("glancePrint").innerHTML=WS.map(w=>`<article style="--c:${w.color}"><div class="hd"><b><i style="background:${w.color}"></i>${w.name}</b><span class="num">${eur(w.total)}<small>${pct(w.total)} of total</small></span></div><div class="meter">${Array.from({length:100},(_,k)=>`<i${k<parseInt(pct(w.total))?' class="f"':""}></i>`).join("")}</div><p>${w.lead}</p><ul>${w.highlights.map(h=>`<li>${h}</li>`).join("")}</ul></article>`).join("");
 
 const paras=(arr,cls)=>arr.map(x=>`<p class="${cls}">${T(x)}</p>`).join("");
+
+/* community */
+document.getElementById("commBox").innerHTML=`<figure class="photo"><div class="pic"><img src="${COMMUNITY.img}" alt="${COMMUNITY.alt}" width="1000" height="1500" loading="lazy"><span class="credit">${COMMUNITY.credit}</span></div><figcaption>${COMMUNITY.caption}</figcaption></figure>
+<div><p class="sec-lede" style="margin-top:0">${COMMUNITY.intro}</p><a class="meet" href="${COMMUNITY.boardLink}">Meet the Early Career Board →</a>
+<blockquote class="quote" style="margin:36px 0 0">“${COMMUNITY.quote}”<footer class="who"><b>${COMMUNITY.name}</b>${COMMUNITY.role}</footer></blockquote>
+<ol class="qa">${COMMUNITY.qa.map(q=>`<li><h3>${q[0]}</h3><p>${q[1]}</p></li>`).join("")}</ol>
+<p class="contact">If you have questions or suggestions for the Board, please reach out to <a href="mailto:${COMMUNITY.contact}">${COMMUNITY.contact}</a>.</p></div>`;
 
 /* chair */
 document.getElementById("chairBox").innerHTML=`<figure class="portrait"><img src="${CHAIR.img}" alt="Portrait of ${CHAIR.name}"><figcaption><b>${CHAIR.name}</b><span>${CHAIR.role}</span></figcaption></figure><div><p class="quote">${T(CHAIR.quote)}</p><div class="letter">${paras(CHAIR.text,"p")}</div><p class="sign"><b>${CHAIR.name}</b>${CHAIR.role}, ODISSEI</p></div>`;

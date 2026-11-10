@@ -211,6 +211,31 @@ const KPI=[
  ["Is ODISSEI positioned internationally?","International proposals joined each year and their success rate","3 proposals in 2026, 67% success","3 a year, 33%+ success rate",`International projects such as CDIF4EOSC, AI4Social, and TRELISS can bring influence in European research infrastructure. In 2026, ODISSEI joined 3 proposals with a 67% success rate, securing €419,000. TRELISS was unsuccessful. Our target is at least 3 proposals a year, each linked to our mission and strategic goals, with a success rate of 33% or higher.`]
 ];
 
+/* ---------- A word from our community ----------
+   Interview with the Early Career Board (Google Doc "Interview ECB for ODISSEI Annual Plan 2027").
+   Answers are quoted as given; do not edit their wording. */
+const COMMUNITY={
+ img:"img/early-career-day.jpg",
+ alt:"Elena Candellone speaks at the ODISSEI Early Career Day, in front of a screen showing the event title",
+ name:"Elena Candellone",
+ role:"ODISSEI Early Career Board",
+ caption:"Elena Candellone at the ODISSEI Early Career Day, Utrecht, 4 November 2026",
+ credit:"Photo: ODISSEI",
+ intro:`As of 2025, ODISSEI has established the Early Career Board to advocate for early-career scholars within the ODISSEI community. We asked the Board to share some of their ideas about ODISSEI and their own role.`,
+ boardLink:"https://odissei-data.nl/organisation/?wpv-boards-and-teams=early-career-board&wpv_aux_current_post_id=212&wpv_aux_parent_post_id=212&wpv_view_count=552",
+ quote:`Without ODISSEI, early career researchers would miss affordable access to data, but also a national community of mentors and peers to learn from.`,
+ qa:[
+  [`What is the main goal of the Early Career Board?`,
+   `The goal of the Early Career Board is to understand and facilitate the needs of PhD candidates and postdocs of ODISSEI member organisations by organising events for networking, skills and career development. The Board comprises early career researchers from different institutions and scientific backgrounds. As we collaborate closely with ODISSEI and the ODISSEI Social Data Science Team, we can organise events and training tailored to the community's needs.`],
+  [`What do early career researchers need most at the start of their careers that infrastructure can provide?`,
+   `A national infrastructure has a lot to offer in terms of data and expert support. With continuous exposure to those resources, the researchers can select the elements that fit their research projects. What early career researchers also need are good mentors and a community of peers. Mentors help researchers navigate methods, funding, and career choices, while a national network connects them with peers and shows them which career paths are open.`],
+  [`What advice would you give a PhD candidate or postdoc who is just discovering ODISSEI? What would early career researchers miss most if ODISSEI didn’t exist?`,
+   `The best advice I can give is to start engaging with the infrastructure early and ask for help navigating elements unfamiliar to you. Explore the data and facilities available to you, and come to an event to meet people working on similar problems. Without ODISSEI, early career researchers would miss affordable access to data, but also a national community of mentors and peers to learn from.`],
+  [`What is the board planning for 2027?`,
+   `We will build on this year’s Early Career Day with more skills workshops and networking events, as well as career events with speakers from academia, industry, government organisations, and NGOs. Our aim is to develop a network of early career scholars from different disciplines in the social sciences. The first event we hosted showed strong interest in connecting with others in adjacent disciplines, as well as in the mutual interests and challenges that researchers face.`]],
+ contact:"earlycareer@odissei-data.nl"
+};
+
 /* ---------- Governance ---------- */
 const GOV_TEXT=[
  `ODISSEI is the Dutch National Infrastructure for Social Science and provides access to a federated set of services to ODISSEI member organisations. Its mission is to enable researchers to leverage comprehensive data, computing power and expertise for studies that shape policy and society.`,
