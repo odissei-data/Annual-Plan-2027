@@ -61,8 +61,8 @@ const WS=[
    {key:true,t:"Fast, flexible recruitment with PANL",s:"A public beta for the ODISSEI community, with dedicated PANL calls.",full:`PANL opens its public beta version to the wider ODISSEI community, and ODISSEI will run dedicated PANL calls to support usage. New features include booking and scheduling for offline studies and an environment for longer-term work with groups of annotators.`},
    {key:true,t:"Linking people to the media they consume",s:"The first wave of the Web & Media Diets Observatory, on at least two platforms.",full:`The first wave of the Web & Media Diets Observatory will go live, covering at least two platforms. A new tool will let researchers retrieve archived web pages from the KB web collection by URL, and a proof-of-concept pipeline will ingest the news websites that respondents actually visited.`},
    {t:"Frameworks for media usage research",s:"A metadata model, a position paper and pilot research projects.",full:`A refined metadata model, a position paper on the Netherlands Media Corpus and a plan for audiovisual collections will be delivered. Pilot research projects will test two routes: from individuals to the content they saw, and from content in one archive to related content in others.`}],
-  items:[["Data collections: international surveys",773953],["Online panels: LISS and PANL",1782760,"incl. €216,410 PANL and €384,750 LISS interfaces"],["Netherlands Media Corpus",518913]],
-  budgetText:`The planned 2027 expenditure for the Observatory is €3,075,626. Part of this total budget will be directed to data collections, to support international surveys and innovations, totalling €773,953. The investment in maintenance and improvements of Online Panels amounts to €1,782,760, including €216,410 for the launch and maintenance of PANL, and €384,750 for improving LISS user interfaces. The planned expenditure on the Netherlands Media Corpus is €518,913 for Web and Media diets collection and the first NMC pilots.`},
+  items:[["Data collections: international surveys",773953],["Online panels: LISS and PANL",1882410,"incl. €216,410 PANL and €384,750 LISS interfaces"],["Netherlands Media Corpus",518913]],
+  budgetText:`The planned 2027 expenditure for the Observatory is €3,175,226. Part of this total budget will be directed to data collections, to support international surveys and innovations, totalling €773,953. The investment in maintenance and improvements of Online Panels amounts to €1,882,410, including €216,410 for the launch and maintenance of PANL, and €384,750 for improving LISS user interfaces. The planned expenditure on the Netherlands Media Corpus is €518,913 for Web and Media diets collection and the first NMC pilots.`},
 
  {id:"laboratory",name:"Laboratory",color:"var(--ws-lab)",img:"img/odissei-network.jpg",alt:"Researchers talking during a break at the ODISSEI Conference",credit:"Photo: nelinadasha.com for ODISSEI",
   head:`New tools for studying life in a <span class="hl">digital, connected</span> society`,
@@ -88,8 +88,8 @@ const WS=[
    {t:"Ready-made building blocks",s:"A first library of reusable experiment components.",full:`A first library of reusable experiment components will be released, and the team will explore AI assistants that help researchers build experiments.`},
    {key:true,t:"Safer network research",s:"Better protection for network data, a map-based explorer and faster community detection.",full:`PLANET-NL will develop methods that protect network data as well as ordinary tables, a visual tool for exploring networks on a map, and faster ways to find communities within very large networks.`},
    {t:"From research to policy",s:"The City Network Science Lab grows into a broader policy lab.",full:`The City Network Science Lab will grow into a broader policy lab, and community events will bring together researchers, policymakers and statistics offices.`}],
-  items:[["Data donation (D3I)",768697],["Mass online experiments",176146],["Large network tools (PLANET-NL)",620762]],
-  budgetText:`Planned 2027 expenditure is €1,565,604. Of this total budget, €768,697 will be allocated to upgrading the Data Donation facilities, ensuring the delivery of the D3I platform as a full service. Investments in mass online experiments will amount to €176,146, ensuring that the online experiments platform will be operational and ready for use. Finally, a budget of €620,762 will be allocated to securely leverage large network tools.`},
+  items:[["Data donation (D3I)",697597],["Mass online experiments",176146],["Large network tools (PLANET-NL)",620762]],
+  budgetText:`Planned 2027 expenditure is €1,494,504. Of this total budget, €697,597 will be allocated to upgrading the Data Donation facilities, ensuring the delivery of the D3I platform as a full service. Investments in mass online experiments will amount to €176,146, ensuring that the online experiments platform will be operational and ready for use. Finally, a budget of €620,762 will be allocated to securely leverage large network tools.`},
 
  {id:"hub",name:"Hub",color:"var(--ws-hub)",img:"img/hub.jpg",alt:"Two researchers working together at a table",credit:"Photo: ODISSEI",
   head:`The people behind the <span class="hl">infrastructure</span>`,
@@ -120,7 +120,7 @@ const WS=[
 ];
 
 /* Budget totals as stated in the plan (line items may differ by rounding) */
-const STATED={data:3052182,observatory:3075626,laboratory:1565604,hub:2542505};
+const STATED={data:3052182,observatory:3175226,laboratory:1494504,hub:2542505};
 
 /* ---------- Message from the Chair ---------- */
 const CHAIR={
@@ -178,10 +178,10 @@ const FIN_TABLE={
   ["OSSC","data","","1.2","","SURF","","",220,411,523.337,416],
   ["SANE","data","1.1","","SANE, FBB","UU-Rebo","","",468,913,966.661,999],
   ["Data Collection","observatory","2.2","2.1","SHARE, ESS, TiU-ESS","","Data collection costs","TiU",560,2157,773.953,582],
-  ["Online Panels","observatory","2.1","2.2","PANL, Deepfield","Centerdata, RU-FSW","Centerdata (LISS panel extension)","Macroscope (Centerdata)",500,2455,1782.760,1780],
+  ["Online Panels","observatory","2.1","2.2","PANL, Deepfield","Centerdata, RU-FSW","Centerdata (LISS panel extension)","Macroscope (Centerdata)",500,1823,1882.410,1343],
   ["Netherlands Media Corpus","observatory","2.3, 3.2 (without UL)","","","","","",0,467,518.913,493],
-  ["Data Donation","laboratory","1.2","3.3","D3I","","","UvA (benchfees), Macroscope (UU)",185,780,768.697,686],
-  ["Mass Online Experiments","laboratory","","3.3","","","Centerdata (oTree)","",110,173,176.146,99],
+  ["Data Donation","laboratory","1.2","3.3","D3I","","","UvA (benchfees), Macroscope (UU)",185,700,697.597,609],
+  ["Mass Online Experiments","laboratory","3.3","","","","Centerdata (oTree)","",110,173,176.146,99],
   ["Large Network Tools (POPNET)","laboratory","3.2","3.2 (only UL)","Popnet","","","UvA (benchfees)",88,583,620.762,607],
   ["Coordination","hub","5.3","4.1","SBD, EUR PDI-SSH","EUR","EUR, VU","",566,1150,848.569,1046],
   ["Education","hub","5.2","4.3","","","EUR","",51,484,469.769,573],
@@ -190,13 +190,13 @@ const FIN_TABLE={
 /* Table 2: revenues and structural funding, in thousands of euros, for the same four years */
 const REV_TABLE=[
  ["Core Revenues",[1640,2153,834,829]],
- ["Core Expenditures (included in Table 1)",[1353,2101,776,468]],
- ["Annual Surplus",[287,52,58,361]],
- ["Cumulative Surplus",[287,339,397,757]],
+ ["Core Expenditures (included in Table 1)",[1353,2101,800,493]],
+ ["Annual Surplus",[287,52,34,336]],
+ ["Cumulative Surplus",[287,339,373,709]],
  null,
  ["Structural Funding",[1054,2791,2292,2287]],
- ["Ongoing Funding",[3302,9605,7944,7821]],
- ["Structural Funding as %",["24.19%","22.52%","22.39%","22.63%"]]
+ ["Ongoing Funding",[3302,8893,7972,7308]],
+ ["Structural Funding as %",["24.19%","23.89%","22.33%","23.84%"]]
 ];
 
 const KPI_INTRO=`ODISSEI’s scope has changed over the past year. The award of Macroscope and Deepfield, together with ODISSEI’s growing role in EU proposals, means the infrastructure now covers a larger and more varied portfolio than our current KPI table was designed for. Rather than adding rows to that table, we propose to monitor ODISSEI through eight questions, each answered by one indicator with its current status and a 2027 target.`;
