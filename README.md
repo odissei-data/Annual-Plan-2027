@@ -20,6 +20,7 @@ Open `content.js` and change the text between the quotes. Keep the commas and br
 - **Values still to be set**: write them in square brackets, for example `"[30%] faster"`. The page highlights them in yellow until you replace them with a real value.
 - **Budgets**: each workstream lists its line items under `items`. The stated totals are in `STATED`. Small rounding differences between the line items and the stated total are expected and are not flagged.
 - **Photos**: put a new image in `img/` and change the `img` path and `credit` of that workstream.
+- **After editing `content.js`**: change the date in `content.js?v=…` near the bottom of `index.html` (for example to today's date). Otherwise browsers that visited before may keep showing the old content.
 
 ## Preview locally
 
