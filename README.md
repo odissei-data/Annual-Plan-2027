@@ -49,6 +49,6 @@ Push to the `main` branch of `odissei-data/Annual-Plan-2027` and enable GitHub P
 
 ## Still to add
 
-- Message from the Chair: final text (the current text in `CHAIR` in `content.js` is a holding version) and a higher-resolution portrait
+- Message from the Chair: a higher-resolution portrait
 - KPI values and targets (marked in square brackets)
 - Final photos with credits (stock placeholders are marked "[credit to be confirmed]")
